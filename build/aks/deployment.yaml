@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: linker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: linker
+  template:
+    metadata:
+      labels:
+        app: linker
+    spec:
+      containers:
+        - name: premkumar
+          image: premkumar.azurecr.io/linker:v6
+          ports:
+            - containerPort: 8001

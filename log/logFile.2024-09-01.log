@@ -1,0 +1,245 @@
+2024-09-01 00:28:12,035 INFO  [main] DocApplication: Starting DocApplication using Java 22.0.2 with PID 23673 (/Users/premkumar/Documents/Linker/build/build-package/target/classes started by premkumar in /Users/premkumar/Documents/Linker)
+2024-09-01 00:28:12,035 INFO  [main] DocApplication: The following 1 profile is active: "dev"
+2024-09-01 00:28:13,114 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-01 00:28:13,279 INFO  [main] ContentreaderConfiguration: entered EntityStore
+2024-09-01 00:28:13,280 INFO  [main] ContentreaderConfiguration: entered StateEntityServiceImpl
+2024-09-01 00:28:13,383 WARN  [main] ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration: Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-09-01 00:28:13,410 INFO  [main] DocApplication: Started DocApplication in 1.566 seconds (process running for 1.98)
+2024-09-01 00:28:13,413 DEBUG [main] HttpModuleBuilder: Patterns [/contentreader, /health-check/{service}, /service-info/{service}, /info, /contentreader/{id}/{eventID}, /get/{id}] in 'simpleUrlHandlerMapping'
+2024-09-01 00:28:13,414 INFO  [main] DocApplication: 
+----------------------------------------------------------
+	Application 'null' is running! Access URLs:
+	Local: 		http://localhost:8001/
+	External: 	http://127.0.0.1:8001/
+	Profile(s): 	[dev]
+----------------------------------------------------------
+2024-09-01 00:28:30,761 INFO  [main] DocApplication: Starting DocApplication using Java 22.0.2 with PID 23690 (/Users/premkumar/Documents/Linker/build/build-package/target/classes started by premkumar in /Users/premkumar/Documents/Linker)
+2024-09-01 00:28:30,761 INFO  [main] DocApplication: The following 1 profile is active: "dev"
+2024-09-01 00:28:31,910 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-01 00:28:32,095 INFO  [main] ContentreaderConfiguration: entered EntityStore
+2024-09-01 00:28:32,096 INFO  [main] ContentreaderConfiguration: entered StateEntityServiceImpl
+2024-09-01 00:28:32,403 WARN  [main] ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration: Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-09-01 00:28:32,448 INFO  [main] DocApplication: Started DocApplication in 1.822 seconds (process running for 2.215)
+2024-09-01 00:28:32,455 DEBUG [main] HttpModuleBuilder: Patterns [/contentreader, /health-check/{service}, /service-info/{service}, /info, /contentreader/{id}/{eventID}, /get/{id}] in 'simpleUrlHandlerMapping'
+2024-09-01 00:28:32,456 INFO  [main] DocApplication: 
+----------------------------------------------------------
+	Application 'null' is running! Access URLs:
+	Local: 		http://localhost:8001/
+	External: 	http://127.0.0.1:8001/
+	Profile(s): 	[dev]
+----------------------------------------------------------
+2024-09-01 00:30:04,613 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 00:30:04,613 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 00:30:04,773 WARN  [http-nio-8001-exec-1] CreateShortestUrlService: Shortest Path got matched Change the Logic
+2024-09-01 00:30:04,773 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 00:30:04,773 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 00:30:04,830 WARN  [http-nio-8001-exec-3] PageNotFound: No mapping for GET /wDhxCRlafmi
+2024-09-01 00:30:04,834 DEBUG [http-nio-8001-exec-3] MultipleMessageSource: No properties file found for [classpath*:messages]
+2024-09-01 00:30:04,834 DEBUG [http-nio-8001-exec-3] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-01 00:30:04,835 DEBUG [http-nio-8001-exec-3] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-01 00:30:04,835 DEBUG [http-nio-8001-exec-3] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-01 00:30:04,835 DEBUG [http-nio-8001-exec-3] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-01 00:30:04,835 DEBUG [http-nio-8001-exec-3] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-01 00:30:04,835 DEBUG [http-nio-8001-exec-3] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-01 00:30:04,835 DEBUG [http-nio-8001-exec-3] MultipleMessageSource: No properties file found for [classpath*:messages_en]
+2024-09-01 00:30:04,835 DEBUG [http-nio-8001-exec-3] MultipleMessageSource: No properties file found for [classpath*:messages_en_US]
+2024-09-01 00:30:33,851 DEBUG [http-nio-8001-exec-5] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 00:30:33,851 DEBUG [http-nio-8001-exec-5] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 00:30:33,853 WARN  [http-nio-8001-exec-5] CreateShortestUrlService: Shortest Path got matched Change the Logic
+2024-09-01 00:30:33,853 DEBUG [http-nio-8001-exec-5] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 00:30:33,853 DEBUG [http-nio-8001-exec-5] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 00:30:33,865 WARN  [http-nio-8001-exec-7] PageNotFound: No mapping for GET /IvWVFDdNPc
+2024-09-01 00:30:53,249 DEBUG [http-nio-8001-exec-9] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 00:30:53,250 DEBUG [http-nio-8001-exec-9] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 00:30:53,252 WARN  [http-nio-8001-exec-9] CreateShortestUrlService: Shortest Path got matched Change the Logic
+2024-09-01 00:30:53,252 DEBUG [http-nio-8001-exec-9] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 00:30:53,252 DEBUG [http-nio-8001-exec-9] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 00:31:28,533 DEBUG [http-nio-8001-exec-3] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 00:31:28,533 DEBUG [http-nio-8001-exec-3] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 00:31:28,538 WARN  [http-nio-8001-exec-3] CreateShortestUrlService: Shortest Path got matched Change the Logic
+2024-09-01 00:31:28,538 DEBUG [http-nio-8001-exec-3] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 00:31:28,538 DEBUG [http-nio-8001-exec-3] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 00:32:20,665 WARN  [http-nio-8001-exec-7] PageNotFound: No mapping for GET /dYFZDOVeBQ
+2024-09-01 00:37:25,381 WARN  [Hikari housekeeper] HikariPool: Hikari - Thread starvation or clock leap detected (housekeeper delta=5m18s560ms).
+2024-09-01 00:37:42,288 INFO  [main] DocApplication: Starting DocApplication using Java 22.0.2 with PID 23860 (/Users/premkumar/Documents/Linker/build/build-package/target/classes started by premkumar in /Users/premkumar/Documents/Linker)
+2024-09-01 00:37:42,288 INFO  [main] DocApplication: The following 1 profile is active: "dev"
+2024-09-01 00:37:43,525 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-01 00:37:43,728 INFO  [main] ContentreaderConfiguration: entered EntityStore
+2024-09-01 00:37:43,729 INFO  [main] ContentreaderConfiguration: entered StateEntityServiceImpl
+2024-09-01 00:37:44,219 WARN  [main] ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration: Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-09-01 00:37:44,275 INFO  [main] DocApplication: Started DocApplication in 2.126 seconds (process running for 2.498)
+2024-09-01 00:37:44,285 DEBUG [main] HttpModuleBuilder: Patterns [/contentreader, /health-check/{service}, /service-info/{service}, /info, /contentreader/{id}/{eventID}, /get/{id}] in 'simpleUrlHandlerMapping'
+2024-09-01 00:37:44,286 INFO  [main] DocApplication: 
+----------------------------------------------------------
+	Application 'null' is running! Access URLs:
+	Local: 		http://localhost:8001/
+	External: 	http://127.0.0.1:8001/
+	Profile(s): 	[dev]
+----------------------------------------------------------
+2024-09-01 00:37:50,980 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 00:37:50,980 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 00:37:51,138 WARN  [http-nio-8001-exec-1] CreateShortestUrlService: Shortest Path got matched Change the Logic
+2024-09-01 00:37:51,138 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 00:37:51,138 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 00:38:30,920 WARN  [Hikari housekeeper] HikariPool: Hikari - Thread starvation or clock leap detected (housekeeper delta=47s892ms).
+2024-09-01 00:38:37,644 DEBUG [http-nio-8001-exec-5] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 00:38:37,644 DEBUG [http-nio-8001-exec-5] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 00:38:37,646 WARN  [http-nio-8001-exec-5] CreateShortestUrlService: Shortest Path got matched Change the Logic
+2024-09-01 00:38:37,647 DEBUG [http-nio-8001-exec-5] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 00:38:37,647 DEBUG [http-nio-8001-exec-5] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 02:12:21,782 WARN  [Hikari housekeeper] HikariPool: Hikari - Thread starvation or clock leap detected (housekeeper delta=1h33m20s10ms).
+2024-09-01 02:12:28,316 INFO  [main] DocApplication: Starting DocApplication using Java 22.0.2 with PID 24154 (/Users/premkumar/Documents/Linker/build/build-package/target/classes started by premkumar in /Users/premkumar/Documents/Linker)
+2024-09-01 02:12:28,317 INFO  [main] DocApplication: The following 1 profile is active: "dev"
+2024-09-01 02:12:29,436 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-01 02:12:29,612 INFO  [main] ContentreaderConfiguration: entered EntityStore
+2024-09-01 02:12:29,612 INFO  [main] ContentreaderConfiguration: entered StateEntityServiceImpl
+2024-09-01 02:12:29,721 WARN  [main] ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration: Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-09-01 02:12:29,749 INFO  [main] DocApplication: Started DocApplication in 1.571 seconds (process running for 1.885)
+2024-09-01 02:12:29,753 DEBUG [main] HttpModuleBuilder: Patterns [/contentreader, /health-check/{service}, /service-info/{service}, /info, /contentreader/{id}/{eventID}, /get/{id}] in 'simpleUrlHandlerMapping'
+2024-09-01 02:12:29,753 INFO  [main] DocApplication: 
+----------------------------------------------------------
+	Application 'null' is running! Access URLs:
+	Local: 		http://localhost:8001/
+	External: 	http://127.0.0.1:8001/
+	Profile(s): 	[dev]
+----------------------------------------------------------
+2024-09-01 02:15:27,946 INFO  [main] DocApplication: Starting DocApplication using Java 22.0.2 with PID 24189 (/Users/premkumar/Documents/Linker/build/build-package/target/classes started by premkumar in /Users/premkumar/Documents/Linker)
+2024-09-01 02:15:27,948 INFO  [main] DocApplication: The following 1 profile is active: "dev"
+2024-09-01 02:15:29,099 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-01 02:15:29,268 INFO  [main] ContentreaderConfiguration: entered EntityStore
+2024-09-01 02:15:29,269 INFO  [main] ContentreaderConfiguration: entered StateEntityServiceImpl
+2024-09-01 02:15:29,375 WARN  [main] ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration: Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-09-01 02:15:29,402 INFO  [main] DocApplication: Started DocApplication in 1.597 seconds (process running for 2.007)
+2024-09-01 02:15:29,405 DEBUG [main] HttpModuleBuilder: Patterns [/contentreader, /health-check/{service}, /service-info/{service}, /info, /contentreader/{id}/{eventID}, /get/{id}] in 'simpleUrlHandlerMapping'
+2024-09-01 02:15:29,406 INFO  [main] DocApplication: 
+----------------------------------------------------------
+	Application 'null' is running! Access URLs:
+	Local: 		http://localhost:8001/
+	External: 	http://127.0.0.1:8001/
+	Profile(s): 	[dev]
+----------------------------------------------------------
+2024-09-01 02:15:43,809 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 02:15:43,809 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 02:15:43,880 WARN  [http-nio-8001-exec-1] CreateShortestUrlService: Shortest Path got matched Change the Logic
+2024-09-01 02:15:43,880 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 02:15:43,880 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 02:16:15,491 INFO  [main] DocApplication: Starting DocApplication using Java 22.0.2 with PID 24237 (/Users/premkumar/Documents/Linker/build/build-package/target/classes started by premkumar in /Users/premkumar/Documents/Linker)
+2024-09-01 02:16:15,492 INFO  [main] DocApplication: The following 1 profile is active: "dev"
+2024-09-01 02:16:16,574 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-01 02:16:16,743 INFO  [main] ContentreaderConfiguration: entered EntityStore
+2024-09-01 02:16:16,743 INFO  [main] ContentreaderConfiguration: entered StateEntityServiceImpl
+2024-09-01 02:16:16,839 WARN  [main] ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration: Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-09-01 02:16:16,865 INFO  [main] DocApplication: Started DocApplication in 1.507 seconds (process running for 1.812)
+2024-09-01 02:16:16,869 DEBUG [main] HttpModuleBuilder: Patterns [/contentreader, /health-check/{service}, /service-info/{service}, /info, /contentreader/{id}/{eventID}, /get/{id}] in 'simpleUrlHandlerMapping'
+2024-09-01 02:16:16,869 INFO  [main] DocApplication: 
+----------------------------------------------------------
+	Application 'null' is running! Access URLs:
+	Local: 		http://localhost:8001/
+	External: 	http://127.0.0.1:8001/
+	Profile(s): 	[dev]
+----------------------------------------------------------
+2024-09-01 02:28:36,512 INFO  [main] DocApplication: Starting DocApplication using Java 22.0.2 with PID 24600 (/Users/premkumar/Documents/Linker/build/build-package/target/classes started by premkumar in /Users/premkumar/Documents/Linker)
+2024-09-01 02:28:36,512 INFO  [main] DocApplication: The following 1 profile is active: "dev"
+2024-09-01 02:28:37,657 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-01 02:28:37,827 INFO  [main] ContentreaderConfiguration: entered EntityStore
+2024-09-01 02:28:37,827 INFO  [main] ContentreaderConfiguration: entered StateEntityServiceImpl
+2024-09-01 02:28:37,929 WARN  [main] ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration: Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-09-01 02:28:37,956 INFO  [main] DocApplication: Started DocApplication in 1.581 seconds (process running for 1.883)
+2024-09-01 02:28:37,959 DEBUG [main] HttpModuleBuilder: Patterns [/contentreader, /health-check/{service}, /service-info/{service}, /info, /contentreader/{id}/{eventID}, /get/{id}] in 'simpleUrlHandlerMapping'
+2024-09-01 02:28:37,960 INFO  [main] DocApplication: 
+----------------------------------------------------------
+	Application 'null' is running! Access URLs:
+	Local: 		http://localhost:8001/
+	External: 	http://127.0.0.1:8001/
+	Profile(s): 	[dev]
+----------------------------------------------------------
+2024-09-01 02:28:42,554 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 02:28:42,554 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 02:28:42,631 WARN  [http-nio-8001-exec-1] CreateShortestUrlService: Shortest Path got matched Change the Logic
+2024-09-01 02:28:42,631 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 02:28:42,631 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 02:29:11,104 INFO  [main] DocApplication: Starting DocApplication using Java 22.0.2 with PID 24633 (/Users/premkumar/Documents/Linker/build/build-package/target/classes started by premkumar in /Users/premkumar/Documents/Linker)
+2024-09-01 02:29:11,105 INFO  [main] DocApplication: The following 1 profile is active: "dev"
+2024-09-01 02:29:12,324 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-01 02:29:12,499 INFO  [main] ContentreaderConfiguration: entered EntityStore
+2024-09-01 02:29:12,499 INFO  [main] ContentreaderConfiguration: entered StateEntityServiceImpl
+2024-09-01 02:29:12,609 WARN  [main] ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration: Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-09-01 02:29:12,641 INFO  [main] DocApplication: Started DocApplication in 1.681 seconds (process running for 2.088)
+2024-09-01 02:29:12,645 DEBUG [main] HttpModuleBuilder: Patterns [/contentreader, /health-check/{service}, /service-info/{service}, /info, /contentreader/{id}/{eventID}, /get/{id}] in 'simpleUrlHandlerMapping'
+2024-09-01 02:29:12,646 INFO  [main] DocApplication: 
+----------------------------------------------------------
+	Application 'null' is running! Access URLs:
+	Local: 		http://localhost:8001/
+	External: 	http://127.0.0.1:8001/
+	Profile(s): 	[dev]
+----------------------------------------------------------
+2024-09-01 02:29:20,888 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 02:29:20,888 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 02:29:21,007 WARN  [http-nio-8001-exec-1] CreateShortestUrlService: Shortest Path got matched Change the Logic
+2024-09-01 02:29:21,007 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 02:29:21,007 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 02:32:54,185 INFO  [main] DocApplication: Starting DocApplication using Java 22.0.2 with PID 24756 (/Users/premkumar/Documents/Linker/build/build-package/target/classes started by premkumar in /Users/premkumar/Documents/Linker)
+2024-09-01 02:32:54,186 INFO  [main] DocApplication: The following 1 profile is active: "dev"
+2024-09-01 02:32:55,299 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-01 02:32:55,475 INFO  [main] ContentreaderConfiguration: entered EntityStore
+2024-09-01 02:32:55,475 INFO  [main] ContentreaderConfiguration: entered StateEntityServiceImpl
+2024-09-01 02:32:55,582 WARN  [main] ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration: Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-09-01 02:32:55,610 INFO  [main] DocApplication: Started DocApplication in 1.555 seconds (process running for 1.854)
+2024-09-01 02:32:55,614 DEBUG [main] HttpModuleBuilder: Patterns [/contentreader, /health-check/{service}, /service-info/{service}, /info, /contentreader/{id}/{eventID}, /get/{id}] in 'simpleUrlHandlerMapping'
+2024-09-01 02:32:55,614 INFO  [main] DocApplication: 
+----------------------------------------------------------
+	Application 'null' is running! Access URLs:
+	Local: 		http://localhost:8001/
+	External: 	http://127.0.0.1:8001/
+	Profile(s): 	[dev]
+----------------------------------------------------------
+2024-09-01 02:33:01,453 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 02:33:01,453 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 02:33:01,518 WARN  [http-nio-8001-exec-1] CreateShortestUrlService: Shortest Path got matched Change the Logic
+2024-09-01 02:33:01,518 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 02:33:01,518 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 02:33:31,996 DEBUG [http-nio-8001-exec-4] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 02:33:31,996 DEBUG [http-nio-8001-exec-4] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 02:33:32,000 WARN  [http-nio-8001-exec-4] CreateShortestUrlService: Shortest Path got matched Change the Logic
+2024-09-01 02:33:32,001 DEBUG [http-nio-8001-exec-4] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 02:33:32,001 DEBUG [http-nio-8001-exec-4] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 02:34:58,246 INFO  [main] DocApplication: Starting DocApplication using Java 22.0.2 with PID 24811 (/Users/premkumar/Documents/Linker/build/build-package/target/classes started by premkumar in /Users/premkumar/Documents/Linker)
+2024-09-01 02:34:58,247 INFO  [main] DocApplication: The following 1 profile is active: "dev"
+2024-09-01 02:34:59,398 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-01 02:34:59,575 INFO  [main] ContentreaderConfiguration: entered EntityStore
+2024-09-01 02:34:59,575 INFO  [main] ContentreaderConfiguration: entered StateEntityServiceImpl
+2024-09-01 02:34:59,682 WARN  [main] ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration: Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-09-01 02:34:59,708 INFO  [main] DocApplication: Started DocApplication in 1.592 seconds (process running for 1.897)
+2024-09-01 02:34:59,712 DEBUG [main] HttpModuleBuilder: Patterns [/contentreader, /health-check/{service}, /service-info/{service}, /info, /contentreader/{id}/{eventID}, /get/{id}] in 'simpleUrlHandlerMapping'
+2024-09-01 02:34:59,712 INFO  [main] DocApplication: 
+----------------------------------------------------------
+	Application 'null' is running! Access URLs:
+	Local: 		http://localhost:8001/
+	External: 	http://127.0.0.1:8001/
+	Profile(s): 	[dev]
+----------------------------------------------------------
+2024-09-01 02:35:08,080 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 02:35:08,080 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 02:35:08,149 WARN  [http-nio-8001-exec-1] CreateShortestUrlService: Shortest Path got matched Change the Logic
+2024-09-01 02:35:08,149 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 02:35:08,149 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 02:45:38,974 INFO  [main] DocApplication: Starting DocApplication using Java 22.0.2 with PID 25177 (/Users/premkumar/Documents/Linker/build/build-package/target/classes started by premkumar in /Users/premkumar/Documents/Linker)
+2024-09-01 02:45:38,975 INFO  [main] DocApplication: The following 1 profile is active: "dev"
+2024-09-01 02:45:40,163 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-01 02:45:40,332 INFO  [main] ContentreaderConfiguration: entered EntityStore
+2024-09-01 02:45:40,333 INFO  [main] ContentreaderConfiguration: entered StateEntityServiceImpl
+2024-09-01 02:45:40,437 WARN  [main] ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration: Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-09-01 02:45:40,464 INFO  [main] DocApplication: Started DocApplication in 1.63 seconds (process running for 1.937)
+2024-09-01 02:45:40,468 DEBUG [main] HttpModuleBuilder: Patterns [/contentreader, /health-check/{service}, /service-info/{service}, /info, /contentreader/{id}/{eventID}, /get/{id}] in 'simpleUrlHandlerMapping'
+2024-09-01 02:45:40,468 INFO  [main] DocApplication: 
+----------------------------------------------------------
+	Application 'null' is running! Access URLs:
+	Local: 		http://localhost:8001/
+	External: 	http://127.0.0.1:8001/
+	Profile(s): 	[dev]
+----------------------------------------------------------
+2024-09-01 02:46:02,695 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 02:46:02,696 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-01 02:46:02,769 WARN  [http-nio-8001-exec-1] CreateShortestUrlService: Shortest Path got matched Change the Logic
+2024-09-01 02:46:02,769 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED
+2024-09-01 02:46:02,769 DEBUG [http-nio-8001-exec-1] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::GENERATED

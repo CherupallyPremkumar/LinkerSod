@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.sod.doc</groupId>
+        <version>${revision}</version>
+        <artifactId>doc-parent</artifactId>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <properties>
+        <core.version>${revision}</core.version>
+    </properties>
+
+    <groupId>com.sod.doc.core</groupId>
+    <artifactId>core</artifactId>
+    <version>${revision}</version>
+    <name>All Modules that belong to the Core deployment</name>
+    <description>Modules execution and deployment project</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.chenile</groupId>
+            <artifactId>chenile-http</artifactId>
+        </dependency>
+
+    </dependencies>
+</project>
