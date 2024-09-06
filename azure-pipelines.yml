@@ -25,27 +25,10 @@ stages:
               jdkArchitectureOption: 'x64'
               jdkSourceOption: 'PreInstalled'
 
-          # Download and Install Maven
+          # Create Maven cache directory if it doesn't exist
           - script: |
-              # Define Maven version and installation directory
-              MAVEN_VERSION=3.8.6
-              MAVEN_HOME=/usr/local/maven
-
-              # Download Maven
-              wget https://apache.osuosl.org/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz
-
-              # Extract and install Maven
-              tar -xzf apache-maven-$MAVEN_VERSION-bin.tar.gz
-              sudo mv apache-maven-$MAVEN_VERSION $MAVEN_HOME
-              
-              # Set Maven environment variables
-              echo 'M2_HOME=$MAVEN_HOME' | sudo tee -a /etc/environment
-              echo 'PATH=$M2_HOME/bin:$PATH' | sudo tee -a /etc/environment
-              source /etc/environment
-              
-              # Verify Maven installation
-              mvn -version
-            displayName: 'Install Maven'
+              mkdir -p $(Pipeline.Workspace)/.m2/repository
+            displayName: 'Create Maven cache directory'
 
           # Cache Maven dependencies
           - task: Cache@2
@@ -61,7 +44,7 @@ stages:
           - task: Maven@3
             inputs:
               mavenPomFile: 'pom.xml'
-              mavenOptions: '$(MAVEN_OPTS)'  # Use Maven options here
+              mavenOptions: '$(MAVEN_OPTS)'
               goals: 'clean install'
               options: '-B'
               javaHomeOption: 'JDKVersion'
