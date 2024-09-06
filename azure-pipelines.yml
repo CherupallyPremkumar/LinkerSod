@@ -16,7 +16,6 @@ stages:
         pool:
           vmImage: ubuntu-latest
         steps:
-          # Step to perform mvn clean install
           - task: Maven@3
             inputs:
               mavenPomFile: 'pom.xml'
