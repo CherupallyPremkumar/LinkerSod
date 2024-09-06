@@ -18,18 +18,34 @@ stages:
         pool:
           vmImage: ubuntu-latest
         steps:
-          # Install Maven
-          - task: UseMaven@0
-            inputs:
-              versionSpec: '3.8.x'  # Specify the Maven version you need
-              mavenVersionOption: 'install'
-
           # Install Java 21
           - task: JavaToolInstaller@0
             inputs:
               versionSpec: '21'
               jdkArchitectureOption: 'x64'
               jdkSourceOption: 'PreInstalled'
+
+          # Download and Install Maven
+          - script: |
+              # Define Maven version and installation directory
+              MAVEN_VERSION=3.8.6
+              MAVEN_HOME=/usr/local/maven
+
+              # Download Maven
+              wget https://apache.osuosl.org/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz
+
+              # Extract and install Maven
+              tar -xzf apache-maven-$MAVEN_VERSION-bin.tar.gz
+              sudo mv apache-maven-$MAVEN_VERSION $MAVEN_HOME
+              
+              # Set Maven environment variables
+              echo 'M2_HOME=$MAVEN_HOME' | sudo tee -a /etc/environment
+              echo 'PATH=$M2_HOME/bin:$PATH' | sudo tee -a /etc/environment
+              source /etc/environment
+              
+              # Verify Maven installation
+              mvn -version
+            displayName: 'Install Maven'
 
           # Cache Maven dependencies
           - task: Cache@2
@@ -40,10 +56,6 @@ stages:
                 v2 | maven
               path: $(Pipeline.Workspace)/.m2/repository
             displayName: Cache Maven local repo
-
-          # Check Java Version
-          - script: java -version
-            displayName: 'Check Java Version'
 
           # Maven build step
           - task: Maven@3
