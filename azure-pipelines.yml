@@ -9,7 +9,7 @@ variables:
 
 stages:
   - stage: Build
-    displayName: Build and Push Image
+    displayName: Build and Push Images
     jobs:
       - job: Build
         displayName: Build and Push
@@ -22,7 +22,7 @@ stages:
               mavenPomFile: 'pom.xml'
               mavenOptions: '-Xmx3072m $(MAVEN_OPTS)'
               goals: 'clean install'
-              options: '-B'  # Optional, adds batch mode to reduce log output
+              options: '-B'
               javaHomeOption: 'JDKVersion'
               jdkVersionOption: '1.22'
               mavenVersionOption: 'Default'
@@ -30,26 +30,31 @@ stages:
               effectivePomSkip: false
               sonarQubeRunAnalysis: false
 
-          # Docker build step
+
+          # Docker build step for the linker image
           - task: Docker@2
-            displayName: Build an image
+            displayName: Build Linker Image
             inputs:
               command: build
-              dockerfile: '$(Build.SourcesDirectory)/build/Dockerfile'
+              dockerfile: '$(Build.SourcesDirectory)/build/LinkerDockerfile'
               tags: |
-                $(tag)
+                linker-$(tag)
               platform: 'linux/amd64'
 
+          # Login to Azure Container Registry
           - task: Docker@2
             displayName: Login to ACR
             inputs:
               command: login
               containerRegistry: '8b99373d-09da-42e0-bc54-293a8e22cdcb'
 
+
+
+          # Push the linker image to ACR
           - task: Docker@2
-            displayName: Push image to ACR
+            displayName: Push Linker Image to ACR
             inputs:
               command: push
               tags: |
-                $(tag)
-              repository: 'premkumar.azurecr.io/myapp'
+                linker-$(tag)
+              repository: 'premkumar.azurecr.io/linker'
