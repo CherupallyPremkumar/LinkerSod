@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<states>
+	<event-information eventId='create'
+                       meta-bodyType='com.sod.doc.contentreader.CreateShortestUrlPayLoad'
+                       
+    />
+	<default-transition-action componentName="contentreaderBaseTransitionAction"/>
+	
+	<flow id='test-flow' default='true'>
+		<entry-action componentName="contentreaderEntryAction"/>
+		<exit-action componentName="contentreaderExitAction"/>
+		<manual-state id='OPENED' initialState='true'>
+			<on eventId='create'  newStateId='GENERATED' componentName='createShortestUrlService'/>
+		</manual-state>
+
+		<manual-state id='GENERATED'>
+			<on eventId='access' newStateId='VALID_URL_LIFE_SPAN' componentName="accessShortestUrlService"/>
+		</manual-state>
+		<auto-state id='VALID_URL_LIFE_SPAN' componentName="validateUrlLifeSpan">
+			<on eventId='yes' newStateId='EXPIRED' />
+			<on eventId='no' newStateId='GENERATED'/>
+		</auto-state>
+		<manual-state id='EXPIRED' />
+	</flow>
+	
+</states>

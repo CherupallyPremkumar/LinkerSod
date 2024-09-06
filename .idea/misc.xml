@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/build/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/core/pom.xml" />
+        <option value="$PROJECT_DIR$/content-reader/pom.xml" />
       </list>
     </option>
   </component>

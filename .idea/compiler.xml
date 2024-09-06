@@ -12,16 +12,25 @@
         <module name="contentreader-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="content-reader-api" target="17" />
+      <module name="content-reader-parent" target="17" />
+      <module name="content-reader-service" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Linker" options="-parameters" />
       <module name="build-package" options="-parameters" />
       <module name="build-parent" options="-parameters" />
+      <module name="content-reader-api" options="-parameters" />
+      <module name="content-reader-parent" options="-parameters" />
+      <module name="content-reader-service" options="-parameters" />
       <module name="contentreader-api" options="-parameters" />
       <module name="contentreader-parent" options="-parameters" />
       <module name="contentreader-service" options="-parameters" />
       <module name="core" options="-parameters" />
+      <module name="doc-parent" options="-parameters" />
     </option>
   </component>
 </project>

@@ -4,7 +4,7 @@ response=$(curl -X PUT "http://localhost:8001/contentreader/0/create" \
      -H "Content-Type: application/json" \
      -d '{
         "originalUrl": "https://chatgpt.com/auth/ext_callback?next=",
-        "timePeriod": "2024-09-15T10:00:00Z",
+        "timePeriod": "2024-10-15T10:00:00Z",
         "fullName": "John Doe"
      }')
 

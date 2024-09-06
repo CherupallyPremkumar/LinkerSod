@@ -4,6 +4,8 @@
     <file url="file://$PROJECT_DIR$/build/build-package/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/build/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/build/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/contentreader/content-reader-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/contentreader/content-reader-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/contentreader/contentreader-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/contentreader/contentreader-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/contentreader/src/main/java" charset="UTF-8" />
