@@ -7,6 +7,7 @@ resources:
 variables:
   tag: '$(Build.BuildId)'
   dockerRegistryServiceConnection: '8b99373d-09da-42e0-bc54-293a8e22cdcb'
+  MAVEN_OPTS: '-Xmx3072m'
 
 stages:
   - stage: Build
@@ -17,16 +18,18 @@ stages:
         pool:
           vmImage: ubuntu-latest
         steps:
+          # Install Maven
+          - task: UseMaven@0
+            inputs:
+              versionSpec: '3.8.x'  # Specify the Maven version you need
+              mavenVersionOption: 'install'
+
           # Install Java 21
           - task: JavaToolInstaller@0
             inputs:
               versionSpec: '21'
               jdkArchitectureOption: 'x64'
               jdkSourceOption: 'PreInstalled'
-
-          # Check Java Version (for verification)
-          - script: java -version
-            displayName: 'Check Java Version'
 
           # Cache Maven dependencies
           - task: Cache@2
@@ -38,11 +41,15 @@ stages:
               path: $(Pipeline.Workspace)/.m2/repository
             displayName: Cache Maven local repo
 
+          # Check Java Version
+          - script: java -version
+            displayName: 'Check Java Version'
+
           # Maven build step
           - task: Maven@3
             inputs:
               mavenPomFile: 'pom.xml'
-              mavenOptions: '-Xmx3072m $(MAVEN_OPTS)'
+              mavenOptions: '$(MAVEN_OPTS)'  # Use Maven options here
               goals: 'clean install'
               options: '-B'
               javaHomeOption: 'JDKVersion'
