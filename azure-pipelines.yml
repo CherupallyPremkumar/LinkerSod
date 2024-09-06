@@ -6,16 +6,35 @@ resources:
 
 variables:
   tag: '$(Build.BuildId)'
+  dockerRegistryServiceConnection: '8b99373d-09da-42e0-bc54-293a8e22cdcb'
 
 stages:
   - stage: Build
-    displayName: Build and Push Images
+    displayName: Build and Push Image
     jobs:
       - job: Build
         displayName: Build and Push
         pool:
           vmImage: ubuntu-latest
         steps:
+          # Install Java 22
+          - task: JavaToolInstaller@0
+            inputs:
+              versionSpec: '22'
+              jdkArchitectureOption: 'x64'
+              jdkSourceOption: 'PreInstalled'
+
+          # Cache Maven dependencies
+          - task: Cache@2
+            inputs:
+              key: 'v2 | maven | "$(Agent.OS)" | **/pom.xml'
+              restoreKeys: |
+                v2 | maven | "$(Agent.OS)"
+                v2 | maven
+              path: $(Pipeline.Workspace)/.m2/repository
+            displayName: Cache Maven local repo
+
+          # Maven build step
           - task: Maven@3
             inputs:
               mavenPomFile: 'pom.xml'
@@ -23,37 +42,21 @@ stages:
               goals: 'clean install'
               options: '-B'
               javaHomeOption: 'JDKVersion'
-              jdkVersionOption: '1.22'
+              jdkVersionOption: '22'
+              jdkArchitectureOption: 'x64'
               mavenVersionOption: 'Default'
               mavenAuthenticateFeed: true
               effectivePomSkip: false
               sonarQubeRunAnalysis: false
 
-
-          # Docker build step for the linker image
+          # Docker build step
           - task: Docker@2
-            displayName: Build Linker Image
+            displayName: Build and push image to container registry
             inputs:
-              command: build
-              dockerfile: '$(Build.SourcesDirectory)/build/LinkerDockerfile'
+              command: buildAndPush
+              repository: 'premkumar'
+              dockerfile: '$(Build.SourcesDirectory)/build/Dockerfile'
+              containerRegistry: '$(dockerRegistryServiceConnection)'
               tags: |
-                linker-$(tag)
-              platform: 'linux/amd64'
-
-          # Login to Azure Container Registry
-          - task: Docker@2
-            displayName: Login to ACR
-            inputs:
-              command: login
-              containerRegistry: '8b99373d-09da-42e0-bc54-293a8e22cdcb'
-
-
-
-          # Push the linker image to ACR
-          - task: Docker@2
-            displayName: Push Linker Image to ACR
-            inputs:
-              command: push
-              tags: |
-                linker-$(tag)
-              repository: 'premkumar.azurecr.io/linker'
+                latest
+                $(tag)
