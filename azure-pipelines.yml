@@ -45,7 +45,7 @@ stages:
             displayName: Login to ACR
             inputs:
               command: login
-              containerRegistry: 'sod pipline'
+              containerRegistry: '8b99373d-09da-42e0-bc54-293a8e22cdcb'
 
 
 
