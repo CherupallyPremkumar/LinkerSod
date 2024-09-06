@@ -24,6 +24,10 @@ stages:
               jdkArchitectureOption: 'x64'
               jdkSourceOption: 'PreInstalled'
 
+          # Check Java Version (for verification)
+          - script: java -version
+            displayName: 'Check Java Version'
+
           # Cache Maven dependencies
           - task: Cache@2
             inputs:
@@ -43,20 +47,25 @@ stages:
               options: '-B'
               javaHomeOption: 'JDKVersion'
               jdkVersionOption: '22'
-              jdkArchitectureOption: 'x64'
-              mavenVersionOption: 'Default'
-              mavenAuthenticateFeed: true
-              effectivePomSkip: false
-              sonarQubeRunAnalysis: false
 
           # Docker build step
           - task: Docker@2
-            displayName: Build and push image to container registry
+            displayName: Build Docker image
             inputs:
-              command: buildAndPush
-              repository: 'premkumar'
+              command: build
               dockerfile: '$(Build.SourcesDirectory)/build/Dockerfile'
+              tags: |
+                $(tag)
+              repository: 'premkumar'
               containerRegistry: '$(dockerRegistryServiceConnection)'
+
+          # Docker push step
+          - task: Docker@2
+            displayName: Push Docker image
+            inputs:
+              command: push
+              repository: 'premkumar'
               tags: |
                 latest
                 $(tag)
+              containerRegistry: '$(dockerRegistryServiceConnection)'
