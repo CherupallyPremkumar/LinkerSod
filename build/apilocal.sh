@@ -23,5 +23,5 @@ urlPart=$(echo $shortestUrl | sed 's|http://localhost:8001/||')
 echo "URL part after 8001/: $urlPart"
 
 # Step 2: Fetch the contentreader using the extracted URL part
-curl -X GET "http://localhost:8001/get/$urlPart"
+curl -X GET "http://localhost:8001/$urlPart"
 

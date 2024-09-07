@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: premkumar
-          image: premkumar.azurecr.io/linker:v6
+          image: premkumar.azurecr.io/premkumar:latest
           ports:
             - containerPort: 8001
