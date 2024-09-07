@@ -20,8 +20,7 @@ import com.sod.doc.contentreader.model.Contentreader;
 
 import java.net.URI;
 
-@RestController
-@CrossOrigin(origins = "*") // Allows all origins, use with caution
+@RestController // Allows all origins, use with caution
 @ChenileController(value = "contentreaderService", serviceName = "_contentreaderStateEntityService_",
         healthCheckerName = "contentreaderHealthChecker")
 public class ContentreaderController extends ControllerSupport {
