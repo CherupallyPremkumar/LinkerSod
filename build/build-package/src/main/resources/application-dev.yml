@@ -48,5 +48,5 @@ server:
       enabled: false
 url:
   prefix:
-    link: 172.169.90.147/
+    link: http://52.228.173.192/
 
