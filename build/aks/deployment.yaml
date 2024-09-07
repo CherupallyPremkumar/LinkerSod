@@ -17,3 +17,5 @@ spec:
           image: premkumar.azurecr.io/premkumar:latest
           ports:
             - containerPort: 8001
+      imagePullSecrets:
+         - name: acr-secret

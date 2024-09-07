@@ -1,1 +1,1 @@
-curl -X GET "http://4.150.211.213/CZLkmjXXcAB"
+curl -X GET "http://172.169.90.147/CZLkmjXXcAB"

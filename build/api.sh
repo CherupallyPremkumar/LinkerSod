@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-response=$(curl -X PUT "http://4.150.211.213/contentreader/0/create" \
+response=$(curl -X PUT "http://172.169.90.147/contentreader/0/create" \
      -H "Content-Type: application/json" \
      -d '{
         "originalUrl": "https://chatgpt.com/auth/ext_callback?next=",
@@ -23,5 +23,5 @@ urlPart=$(echo $shortestUrl | sed 's|http://localhost:8001/||')
 echo "URL part after 8001/: $urlPart"
 
 # Step 2: Fetch the contentreader using the extracted URL part
-curl -X GET "http://4.150.211.213/$urlPart"
+curl -X GET "http://172.169.90.147/$urlPart"
 

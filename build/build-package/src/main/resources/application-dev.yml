@@ -48,5 +48,5 @@ server:
       enabled: false
 url:
   prefix:
-    link: http://localhost:8001/
+    link: http:/172.169.90.147/
 
