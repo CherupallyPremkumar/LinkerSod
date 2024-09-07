@@ -21,7 +21,7 @@ import com.sod.doc.contentreader.model.Contentreader;
 import java.net.URI;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:8080")
 @ChenileController(value = "contentreaderService", serviceName = "_contentreaderStateEntityService_",
         healthCheckerName = "contentreaderHealthChecker")
 public class ContentreaderController extends ControllerSupport {
