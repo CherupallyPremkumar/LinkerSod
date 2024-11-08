@@ -4,6 +4,10 @@
     <file url="file://$PROJECT_DIR$/build/build-package/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/build/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/build/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chatapp/chatapp-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chatapp/chatapp-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chatapp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chatapp/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/contentreader/content-reader-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/contentreader/content-reader-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/contentreader/contentreader-api/src/main/java" charset="UTF-8" />
@@ -13,5 +17,9 @@
     <file url="file://$PROJECT_DIR$/core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/traceroute/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/traceroute/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/traceroute/traceroute-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/traceroute/traceroute-service/src/main/java" charset="UTF-8" />
   </component>
 </project>

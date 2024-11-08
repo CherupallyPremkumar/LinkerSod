@@ -1,0 +1,616 @@
+2024-09-19 00:40:22,577 INFO  [main] WebSocketIntegrationTest: Starting WebSocketIntegrationTest using Java 22.0.2 with PID 62570 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-19 00:40:22,578 DEBUG [main] WebSocketIntegrationTest: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-19 00:40:22,578 INFO  [main] WebSocketIntegrationTest: No active profile set, falling back to 1 default profile: "default"
+2024-09-19 00:40:23,224 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-19 00:40:23,853 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-19 00:40:23,871 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+2024-09-19 00:40:23,875 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-19 00:40:23,879 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-19 00:40:23,880 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-19 00:40:23,880 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-19 00:40:23,885 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-19 00:40:23,922 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-19 00:40:24,092 DEBUG [main] Mappings: 'stompWebSocketHandlerMapping' {/api/chat/**=org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler@208ce928}
+2024-09-19 00:40:24,184 INFO  [main] WebSocketIntegrationTest: Started WebSocketIntegrationTest in 1.711 seconds (process running for 2.114)
+2024-09-19 00:40:24,188 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/chatapp/{id}=org.chenile.http.handler.HttpEntryPoint@643947d1, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@44b99f09, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@261d7ee2, /info=org.chenile.http.handler.HttpEntryPoint@724a80d2, /chatapp/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@5ce34685, /chatapp=org.chenile.http.handler.HttpEntryPoint@54aacbc7}
+2024-09-19 00:40:24,189 WARN  [main] TestContextManager: Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [com.sod.doc.chatapp.WebSocketIntegrationTest@f61f06e]
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.sod.doc.chatapp.WebSocketIntegrationTest': Unsatisfied dependency expressed through field 'stompClient': No qualifying bean of type 'org.springframework.web.socket.messaging.WebSocketStompClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:787)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:398)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:143)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:98)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.web.socket.messaging.WebSocketStompClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1880)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1406)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784)
+	... 31 common frames omitted
+2024-09-19 00:40:24,193 DEBUG [main] Runtime: Runtime.exit() called with status: -1
+java.lang.Throwable: Runtime.exit(-1)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1925)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:56)
+2024-09-19 00:40:49,922 INFO  [main] WebSocketIntegrationTest: Starting WebSocketIntegrationTest using Java 22.0.2 with PID 62579 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-19 00:40:49,923 DEBUG [main] WebSocketIntegrationTest: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-19 00:40:49,924 INFO  [main] WebSocketIntegrationTest: No active profile set, falling back to 1 default profile: "default"
+2024-09-19 00:40:50,385 DEBUG [main] ProcessBuilder: ProcessBuilder.start(): pid: 62580, dir: null, cmd: "/opt/homebrew/Cellar/openjdk/22.0.2/libexec/openjdk.jdk/Contents/Home/bin/java"
+java.lang.RuntimeException: ProcessBuilder.start() debug
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1147)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at net.bytebuddy.agent.ByteBuddyAgent.installExternal(ByteBuddyAgent.java:705)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:636)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:616)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:568)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:545)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.<clinit>(InlineDelegateByteBuddyMockMaker.java:133)
+	at org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.<init>(InlineByteBuddyMockMaker.java:23)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.mockito.internal.configuration.plugins.DefaultMockitoPlugins.create(DefaultMockitoPlugins.java:103)
+	at org.mockito.internal.configuration.plugins.DefaultMockitoPlugins.getDefaultPlugin(DefaultMockitoPlugins.java:79)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:75)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:50)
+	at org.mockito.internal.configuration.plugins.PluginRegistry.<init>(PluginRegistry.java:27)
+	at org.mockito.internal.configuration.plugins.Plugins.<clinit>(Plugins.java:22)
+	at org.mockito.internal.MockitoCore.<clinit>(MockitoCore.java:73)
+	at org.mockito.Mockito.<clinit>(Mockito.java:1683)
+	at org.springframework.boot.test.mock.mockito.MockReset.withSettings(MockReset.java:81)
+	at org.springframework.boot.test.mock.mockito.MockDefinition.createMock(MockDefinition.java:147)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.registerMock(MockitoPostProcessor.java:185)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.register(MockitoPostProcessor.java:167)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:141)
+	at org.springframework.boot.test.mock.mockito.MockitoPostProcessor.postProcessBeanFactory(MockitoPostProcessor.java:129)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:363)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:122)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:106)
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:63)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2024-09-19 00:40:51,159 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-19 00:40:51,707 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-19 00:40:51,730 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+2024-09-19 00:40:51,735 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-19 00:40:51,739 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-19 00:40:51,742 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-19 00:40:51,743 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-19 00:40:51,748 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-19 00:40:51,790 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-19 00:40:51,968 DEBUG [main] Mappings: 'stompWebSocketHandlerMapping' {/api/chat/**=org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler@2b55ac77}
+2024-09-19 00:40:52,081 INFO  [main] WebSocketIntegrationTest: Started WebSocketIntegrationTest in 2.27 seconds (process running for 2.732)
+2024-09-19 00:40:52,088 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/chatapp/{id}=org.chenile.http.handler.HttpEntryPoint@373e09c7, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@3f04847e, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@2a7b4b19, /info=org.chenile.http.handler.HttpEntryPoint@26415b5e, /chatapp/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@61761e60, /chatapp=org.chenile.http.handler.HttpEntryPoint@7aca4144}
+2024-09-19 00:40:52,112 DEBUG [main] Runtime: Runtime.exit() called with status: -1
+java.lang.Throwable: Runtime.exit(-1)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1925)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:56)
+2024-09-19 00:41:26,052 INFO  [main] WebSocketIntegrationTest: Starting WebSocketIntegrationTest using Java 22.0.2 with PID 62591 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-19 00:41:26,052 DEBUG [main] WebSocketIntegrationTest: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-19 00:41:26,052 INFO  [main] WebSocketIntegrationTest: No active profile set, falling back to 1 default profile: "default"
+2024-09-19 00:41:26,728 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-19 00:41:27,384 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-19 00:41:27,404 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+2024-09-19 00:41:27,408 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-19 00:41:27,412 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-19 00:41:27,413 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-19 00:41:27,414 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-19 00:41:27,418 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-19 00:41:27,454 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-19 00:41:27,629 DEBUG [main] Mappings: 'stompWebSocketHandlerMapping' {/api/chat/**=org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler@1391d95f}
+2024-09-19 00:41:27,722 INFO  [main] WebSocketIntegrationTest: Started WebSocketIntegrationTest in 1.855 seconds (process running for 2.473)
+2024-09-19 00:41:27,726 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/chatapp/{id}=org.chenile.http.handler.HttpEntryPoint@5c088d72, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@4bda93f1, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@45bde54d, /info=org.chenile.http.handler.HttpEntryPoint@ae49f31, /chatapp/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@121fe002, /chatapp=org.chenile.http.handler.HttpEntryPoint@d45acab}
+2024-09-19 00:41:27,746 DEBUG [main] ProcessBuilder: ProcessBuilder.start(): pid: 62593, dir: null, cmd: "/opt/homebrew/Cellar/openjdk/22.0.2/libexec/openjdk.jdk/Contents/Home/bin/java"
+java.lang.RuntimeException: ProcessBuilder.start() debug
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1147)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at net.bytebuddy.agent.ByteBuddyAgent.installExternal(ByteBuddyAgent.java:705)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:636)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:616)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:568)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:545)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.<clinit>(InlineDelegateByteBuddyMockMaker.java:133)
+	at org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.<init>(InlineByteBuddyMockMaker.java:23)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.mockito.internal.configuration.plugins.DefaultMockitoPlugins.create(DefaultMockitoPlugins.java:103)
+	at org.mockito.internal.configuration.plugins.DefaultMockitoPlugins.getDefaultPlugin(DefaultMockitoPlugins.java:79)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:75)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:50)
+	at org.mockito.internal.configuration.plugins.PluginRegistry.<init>(PluginRegistry.java:27)
+	at org.mockito.internal.configuration.plugins.Plugins.<clinit>(Plugins.java:22)
+	at org.mockito.internal.MockitoCore.<clinit>(MockitoCore.java:73)
+	at org.mockito.Mockito.<clinit>(Mockito.java:1683)
+	at org.springframework.boot.test.mock.mockito.MockReset.get(MockReset.java:105)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:85)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:73)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.beforeTestMethod(ResetMocksTestExecutionListener.java:60)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:320)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2024-09-19 00:41:28,011 DEBUG [main] Runtime: Runtime.exit() called with status: -1
+java.lang.Throwable: Runtime.exit(-1)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1925)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:56)
+2024-09-19 00:43:59,028 INFO  [main] WebSocketIntegrationTest: Starting WebSocketIntegrationTest using Java 22.0.2 with PID 62629 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-19 00:43:59,028 DEBUG [main] WebSocketIntegrationTest: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-19 00:43:59,029 INFO  [main] WebSocketIntegrationTest: No active profile set, falling back to 1 default profile: "default"
+2024-09-19 00:43:59,688 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-19 00:44:00,427 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-19 00:44:00,447 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+2024-09-19 00:44:00,452 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-19 00:44:00,456 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-19 00:44:00,457 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-19 00:44:00,457 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-19 00:44:00,461 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-19 00:44:00,497 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-19 00:44:00,668 DEBUG [main] Mappings: 'stompWebSocketHandlerMapping' {/api/chat/**=org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler@26401eda}
+2024-09-19 00:44:00,765 INFO  [main] WebSocketIntegrationTest: Started WebSocketIntegrationTest in 1.857 seconds (process running for 2.317)
+2024-09-19 00:44:00,769 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/chatapp/{id}=org.chenile.http.handler.HttpEntryPoint@121fe002, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@d45acab, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@2778a7c3, /info=org.chenile.http.handler.HttpEntryPoint@94ba90a, /chatapp/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@643947d1, /chatapp=org.chenile.http.handler.HttpEntryPoint@44b99f09}
+2024-09-19 00:44:00,792 DEBUG [main] ProcessBuilder: ProcessBuilder.start(): pid: 62631, dir: null, cmd: "/opt/homebrew/Cellar/openjdk/22.0.2/libexec/openjdk.jdk/Contents/Home/bin/java"
+java.lang.RuntimeException: ProcessBuilder.start() debug
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1147)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at net.bytebuddy.agent.ByteBuddyAgent.installExternal(ByteBuddyAgent.java:705)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:636)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:616)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:568)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:545)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.<clinit>(InlineDelegateByteBuddyMockMaker.java:133)
+	at org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.<init>(InlineByteBuddyMockMaker.java:23)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.mockito.internal.configuration.plugins.DefaultMockitoPlugins.create(DefaultMockitoPlugins.java:103)
+	at org.mockito.internal.configuration.plugins.DefaultMockitoPlugins.getDefaultPlugin(DefaultMockitoPlugins.java:79)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:75)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:50)
+	at org.mockito.internal.configuration.plugins.PluginRegistry.<init>(PluginRegistry.java:27)
+	at org.mockito.internal.configuration.plugins.Plugins.<clinit>(Plugins.java:22)
+	at org.mockito.internal.MockitoCore.<clinit>(MockitoCore.java:73)
+	at org.mockito.Mockito.<clinit>(Mockito.java:1683)
+	at org.springframework.boot.test.mock.mockito.MockReset.get(MockReset.java:105)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:85)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:73)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.beforeTestMethod(ResetMocksTestExecutionListener.java:60)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:320)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2024-09-19 00:44:01,057 DEBUG [main] Runtime: Runtime.exit() called with status: -1
+java.lang.Throwable: Runtime.exit(-1)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1925)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:56)
+2024-09-19 00:49:11,711 INFO  [main] WebSocketIntegrationTest: Starting WebSocketIntegrationTest using Java 22.0.2 with PID 62741 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-19 00:49:11,712 DEBUG [main] WebSocketIntegrationTest: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-19 00:49:11,712 INFO  [main] WebSocketIntegrationTest: No active profile set, falling back to 1 default profile: "default"
+2024-09-19 00:49:12,381 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-19 00:49:13,081 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-19 00:49:13,100 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+2024-09-19 00:49:13,104 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2024-09-19 00:49:13,109 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-19 00:49:13,109 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-19 00:49:13,110 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-19 00:49:13,114 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-19 00:49:13,152 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-19 00:49:13,337 DEBUG [main] Mappings: 'stompWebSocketHandlerMapping' {/api/chat/**=org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler@7bfedff3}
+2024-09-19 00:49:13,432 INFO  [main] WebSocketIntegrationTest: Started WebSocketIntegrationTest in 1.837 seconds (process running for 2.278)
+2024-09-19 00:49:13,435 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/chatapp/{id}=org.chenile.http.handler.HttpEntryPoint@7f794b0f, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@efe75a2, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@a49cdd6, /info=org.chenile.http.handler.HttpEntryPoint@109a462e, /chatapp/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@258e5601, /chatapp=org.chenile.http.handler.HttpEntryPoint@58a06477}
+2024-09-19 00:49:13,451 DEBUG [main] ProcessBuilder: ProcessBuilder.start(): pid: 62743, dir: null, cmd: "/opt/homebrew/Cellar/openjdk/22.0.2/libexec/openjdk.jdk/Contents/Home/bin/java"
+java.lang.RuntimeException: ProcessBuilder.start() debug
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1147)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at net.bytebuddy.agent.ByteBuddyAgent.installExternal(ByteBuddyAgent.java:705)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:636)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:616)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:568)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:545)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.<clinit>(InlineDelegateByteBuddyMockMaker.java:133)
+	at org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.<init>(InlineByteBuddyMockMaker.java:23)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.mockito.internal.configuration.plugins.DefaultMockitoPlugins.create(DefaultMockitoPlugins.java:103)
+	at org.mockito.internal.configuration.plugins.DefaultMockitoPlugins.getDefaultPlugin(DefaultMockitoPlugins.java:79)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:75)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:50)
+	at org.mockito.internal.configuration.plugins.PluginRegistry.<init>(PluginRegistry.java:27)
+	at org.mockito.internal.configuration.plugins.Plugins.<clinit>(Plugins.java:22)
+	at org.mockito.internal.MockitoCore.<clinit>(MockitoCore.java:73)
+	at org.mockito.Mockito.<clinit>(Mockito.java:1683)
+	at org.springframework.boot.test.mock.mockito.MockReset.get(MockReset.java:105)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:85)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:73)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.beforeTestMethod(ResetMocksTestExecutionListener.java:60)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:320)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2024-09-19 00:49:13,721 DEBUG [main] Runtime: Runtime.exit() called with status: -1
+java.lang.Throwable: Runtime.exit(-1)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1925)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:56)
+2024-09-19 00:49:50,855 INFO  [main] WebSocketIntegrationTest: Starting WebSocketIntegrationTest using Java 22.0.2 with PID 62790 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-19 00:49:50,855 DEBUG [main] WebSocketIntegrationTest: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-19 00:49:50,855 INFO  [main] WebSocketIntegrationTest: No active profile set, falling back to 1 default profile: "default"
+2024-09-19 00:49:51,520 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-19 00:49:52,250 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-19 00:49:52,270 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+2024-09-19 00:49:52,274 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-19 00:49:52,279 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-19 00:49:52,280 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-19 00:49:52,280 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-19 00:49:52,285 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-19 00:49:52,324 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-19 00:49:52,491 DEBUG [main] Mappings: 'stompWebSocketHandlerMapping' {/api/chat=org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@6c09d716}
+2024-09-19 00:49:52,584 INFO  [main] WebSocketIntegrationTest: Started WebSocketIntegrationTest in 1.837 seconds (process running for 2.309)
+2024-09-19 00:49:52,588 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/chatapp/{id}=org.chenile.http.handler.HttpEntryPoint@47897093, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@33e19be9, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@6ed2aa8a, /info=org.chenile.http.handler.HttpEntryPoint@53ec379a, /chatapp/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@5f6dd89c, /chatapp=org.chenile.http.handler.HttpEntryPoint@606c2e4b}
+2024-09-19 00:49:52,607 DEBUG [main] ProcessBuilder: ProcessBuilder.start(): pid: 62793, dir: null, cmd: "/opt/homebrew/Cellar/openjdk/22.0.2/libexec/openjdk.jdk/Contents/Home/bin/java"
+java.lang.RuntimeException: ProcessBuilder.start() debug
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1147)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at net.bytebuddy.agent.ByteBuddyAgent.installExternal(ByteBuddyAgent.java:705)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:636)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:616)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:568)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:545)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.<clinit>(InlineDelegateByteBuddyMockMaker.java:133)
+	at org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.<init>(InlineByteBuddyMockMaker.java:23)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.mockito.internal.configuration.plugins.DefaultMockitoPlugins.create(DefaultMockitoPlugins.java:103)
+	at org.mockito.internal.configuration.plugins.DefaultMockitoPlugins.getDefaultPlugin(DefaultMockitoPlugins.java:79)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:75)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:50)
+	at org.mockito.internal.configuration.plugins.PluginRegistry.<init>(PluginRegistry.java:27)
+	at org.mockito.internal.configuration.plugins.Plugins.<clinit>(Plugins.java:22)
+	at org.mockito.internal.MockitoCore.<clinit>(MockitoCore.java:73)
+	at org.mockito.Mockito.<clinit>(Mockito.java:1683)
+	at org.springframework.boot.test.mock.mockito.MockReset.get(MockReset.java:105)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:85)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:73)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.beforeTestMethod(ResetMocksTestExecutionListener.java:60)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:320)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2024-09-19 00:49:52,876 DEBUG [main] Runtime: Runtime.exit() called with status: -1
+java.lang.Throwable: Runtime.exit(-1)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1925)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:56)
+2024-09-19 00:50:08,847 INFO  [main] WebSocketIntegrationTest: Starting WebSocketIntegrationTest using Java 22.0.2 with PID 62798 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-19 00:50:08,847 DEBUG [main] WebSocketIntegrationTest: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-19 00:50:08,848 INFO  [main] WebSocketIntegrationTest: No active profile set, falling back to 1 default profile: "default"
+2024-09-19 00:50:09,908 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-19 00:50:11,150 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-19 00:50:11,194 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+2024-09-19 00:50:11,203 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-19 00:50:11,212 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-19 00:50:11,213 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-19 00:50:11,214 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-19 00:50:11,220 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-19 00:50:11,282 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-19 00:50:11,609 DEBUG [main] Mappings: 'stompWebSocketHandlerMapping' {/api/chat=org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@58dd584a}
+2024-09-19 00:50:29,793 INFO  [main] WebSocketIntegrationTest: Started WebSocketIntegrationTest in 21.075 seconds (process running for 21.641)
+2024-09-19 00:50:29,799 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/chatapp/{id}=org.chenile.http.handler.HttpEntryPoint@7e00a43e, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@3f4b59fd, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@22599048, /info=org.chenile.http.handler.HttpEntryPoint@435a13ac, /chatapp/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@38007ead, /chatapp=org.chenile.http.handler.HttpEntryPoint@5de15ce1}
+2024-09-19 00:50:29,829 DEBUG [main] ProcessBuilder: ProcessBuilder.start(): pid: 62801, dir: null, cmd: "/opt/homebrew/Cellar/openjdk/22.0.2/libexec/openjdk.jdk/Contents/Home/bin/java"
+java.lang.RuntimeException: ProcessBuilder.start() debug
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1147)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at net.bytebuddy.agent.ByteBuddyAgent.installExternal(ByteBuddyAgent.java:705)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:636)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:616)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:568)
+	at net.bytebuddy.agent.ByteBuddyAgent.install(ByteBuddyAgent.java:545)
+	at org.mockito.internal.creation.bytebuddy.InlineDelegateByteBuddyMockMaker.<clinit>(InlineDelegateByteBuddyMockMaker.java:133)
+	at org.mockito.internal.creation.bytebuddy.InlineByteBuddyMockMaker.<init>(InlineByteBuddyMockMaker.java:23)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.mockito.internal.configuration.plugins.DefaultMockitoPlugins.create(DefaultMockitoPlugins.java:103)
+	at org.mockito.internal.configuration.plugins.DefaultMockitoPlugins.getDefaultPlugin(DefaultMockitoPlugins.java:79)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:75)
+	at org.mockito.internal.configuration.plugins.PluginLoader.loadPlugin(PluginLoader.java:50)
+	at org.mockito.internal.configuration.plugins.PluginRegistry.<init>(PluginRegistry.java:27)
+	at org.mockito.internal.configuration.plugins.Plugins.<clinit>(Plugins.java:22)
+	at org.mockito.internal.MockitoCore.<clinit>(MockitoCore.java:73)
+	at org.mockito.Mockito.<clinit>(Mockito.java:1683)
+	at org.springframework.boot.test.mock.mockito.MockReset.get(MockReset.java:105)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:85)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:73)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.beforeTestMethod(ResetMocksTestExecutionListener.java:60)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:320)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:252)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2024-09-19 20:06:15,051 WARN  [Hikari housekeeper] HikariPool: Hikari - Thread starvation or clock leap detected (housekeeper delta=19h15m32s818ms).
+2024-09-19 20:06:15,197 DEBUG [main] Runtime: Runtime.exit() called with status: -1
+java.lang.Throwable: Runtime.exit(-1)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1925)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:56)

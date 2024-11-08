@@ -9,6 +9,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/core/pom.xml" />
         <option value="$PROJECT_DIR$/content-reader/pom.xml" />
+        <option value="$PROJECT_DIR$/traceroute/pom.xml" />
+        <option value="$PROJECT_DIR$/chatapp/pom.xml" />
       </list>
     </option>
   </component>

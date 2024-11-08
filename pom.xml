@@ -11,6 +11,8 @@
     <modules>
         <module>core</module>
         <module>contentreader</module>
+        <module>traceroute</module>
+        <module>chatapp</module>
         <module>build</module>
     </modules>
 
@@ -42,6 +44,26 @@
             <dependency>
                 <groupId>com.sod.doc.contentreader</groupId>
                 <artifactId>contentreader-service</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sod.doc.traceroute</groupId>
+                <artifactId>traceroute-api</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sod.doc.traceroute</groupId>
+                <artifactId>traceroute-service</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sod.doc.chatapp</groupId>
+                <artifactId>chatapp-service</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sod.doc.chatapp</groupId>
+                <artifactId>chatapp-api</artifactId>
                 <version>${revision}</version>
             </dependency>
         </dependencies>

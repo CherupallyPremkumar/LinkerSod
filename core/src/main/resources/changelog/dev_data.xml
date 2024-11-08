@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="1" author="yourname">
+        <insert tableName="users">
+            <column name="username" value="john_doe"/>
+            <column name="password" value="hashed_password"/>
+            <column name="email" value="john.doe@example.com"/>
+            <column name="fullName" value="John Doe"/>
+            <column name="avatarUrl" value="http://example.com/avatar1.jpg"/>
+        </insert>
+
+        <insert tableName="users">
+            <column name="username" value="jane_smith"/>
+            <column name="password" value="hashed_password_2"/>
+            <column name="email" value="jane.smith@example.com"/>
+            <column name="fullName" value="Jane Smith"/>
+            <column name="avatarUrl" value="http://example.com/avatar2.jpg"/>
+        </insert>
+    </changeSet>
+    <changeSet id="2" author="yourname">
+        <!-- John Doe and Jane Smith are friends -->
+        <insert tableName="friends">
+            <column name="userId" value="john_doe"/>
+            <column name="friendId" value="jane_smith"/>
+        </insert>
+
+        <!-- Jane Smith is also friends with another user -->
+        <insert tableName="friends">
+            <column name="userId" value="jane_smith"/>
+            <column name="friendId" value="alex_brown"/>
+        </insert>
+    </changeSet>
+    <changeSet id="3" author="yourname">
+        <insert tableName="messages">
+            <column name="senderId" value="john_doe"/>
+            <column name="receiverId" value="jane_smith"/>
+            <column name="content" value="Hello, Jane!"/>
+            <column name="content_type" value="TEXT"/>
+            <column name="sentAt" valueDate="2024-10-20T10:00:00"/>
+            <column name="receivedAt" valueDate="2024-10-20T10:01:00"/>
+            <column name="seen_at" valueDate="2024-10-20T10:02:00"/>
+        </insert>
+
+        <insert tableName="messages">
+            <column name="senderId" value="jane_smith"/>
+            <column name="receiverId" value="john_doe"/>
+            <column name="content" value="Hi John, how are you?"/>
+            <column name="content_type" value="TEXT"/>
+            <column name="sentAt" valueDate="2024-10-20T10:03:00"/>
+            <column name="receivedAt" valueDate="2024-10-20T10:04:00"/>
+            <column name="seen_at" valueDate="2024-10-20T10:05:00"/>
+        </insert>
+    </changeSet>
+    <changeSet id="4" author="yourname">
+        <insert tableName="chatapp">
+            <!-- Reference an existing user for the Chatapp instance -->
+            <column name="users" value="1"/> <!-- Assuming 1 is the ID for 'john_doe' -->
+        </insert>
+
+        <insert tableName="chatapp">
+            <column name="users" value="2"/> <!-- Assuming 2 is the ID for 'jane_smith' -->
+        </insert>
+    </changeSet>
+</databaseChangeLog>

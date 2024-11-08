@@ -1,0 +1,54 @@
+@startuml
+skinparam class {
+    BackgroundColor PaleGreen
+    ArrowColor NavyBlue
+    BorderColor Black
+}
+
+class "WebSocket Client" {
+    + connect()
+    + sendMessage()
+    + receiveMessage()
+}
+
+class "WebSocket Server (Spring)" {
+    + handleWebSocketConnection()
+    + handleWebSocketMessages()
+    + closeConnection()
+}
+
+class "STOMP Protocol" {
+    + SUBSCRIBE
+    + SEND
+    + UNSUBSCRIBE
+}
+
+class "Message Broker" {
+    + routeMessages()
+    + manageSubscriptions()
+}
+
+class "Spring Controller" {
+    + @MessageMapping
+    + sendMessageToBroker()
+}
+
+class "STOMP Handler (SimpleBroker)" {
+    + registerSubscription()
+    + handleMessages()
+}
+
+class "Message Destination" {
+    + Topic
+    + Queue
+}
+
+"WebSocket Client" --> "WebSocket Server (Spring)" : WebSocket connection
+"WebSocket Server (Spring)" --> "STOMP Protocol" : Message exchange over WebSocket
+"STOMP Protocol" --> "Message Broker" : Forward messages
+"Message Broker" --> "Spring Controller" : Route messages
+"Spring Controller" --> "Message Broker" : Send messages to broker
+"Message Broker" --> "STOMP Handler (SimpleBroker)" : Handle subscription
+"STOMP Handler (SimpleBroker)" --> "Message Destination" : Route to appropriate topic/queue
+
+@enduml

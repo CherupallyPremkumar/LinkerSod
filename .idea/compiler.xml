@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -10,6 +11,10 @@
         <module name="contentreader-api" />
         <module name="core" />
         <module name="contentreader-service" />
+        <module name="traceroute-service" />
+        <module name="chatapp-service" />
+        <module name="traceroute-api" />
+        <module name="chatapp-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,6 +28,9 @@
       <module name="Linker" options="-parameters" />
       <module name="build-package" options="-parameters" />
       <module name="build-parent" options="-parameters" />
+      <module name="chatapp-api" options="-parameters" />
+      <module name="chatapp-parent" options="-parameters" />
+      <module name="chatapp-service" options="-parameters" />
       <module name="content-reader-api" options="-parameters" />
       <module name="content-reader-parent" options="-parameters" />
       <module name="content-reader-service" options="-parameters" />
@@ -31,6 +39,9 @@
       <module name="contentreader-service" options="-parameters" />
       <module name="core" options="-parameters" />
       <module name="doc-parent" options="-parameters" />
+      <module name="traceroute-api" options="-parameters" />
+      <module name="traceroute-parent" options="-parameters" />
+      <module name="traceroute-service" options="-parameters" />
     </option>
   </component>
 </project>

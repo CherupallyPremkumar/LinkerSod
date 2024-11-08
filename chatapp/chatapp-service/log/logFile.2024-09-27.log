@@ -1,0 +1,1142 @@
+2024-09-27 17:12:39,308 INFO  [main] CukesSteps: Starting CukesSteps using Java 22.0.2 with PID 6850 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-27 17:12:39,308 DEBUG [main] CukesSteps: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-27 17:12:39,309 INFO  [main] CukesSteps: The following 1 profile is active: "unittest"
+2024-09-27 17:12:39,949 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-27 17:12:40,578 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-27 17:12:40,598 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+2024-09-27 17:12:40,602 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-27 17:12:40,606 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-27 17:12:40,607 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-27 17:12:40,607 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-27 17:12:40,611 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-27 17:12:40,647 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-27 17:12:40,790 ERROR [main] Digester: Begin event threw exception
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'createUserInChatAppCommand' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:895)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.chenile.stm.spring.SpringBeanFactoryAdapter.getBean(SpringBeanFactoryAdapter.java:12)
+	at org.chenile.stm.impl.STMFlowStoreImpl.makeComponent(STMFlowStoreImpl.java:126)
+	at org.chenile.stm.impl.STMFlowStoreImpl.makeAction(STMFlowStoreImpl.java:135)
+	at org.chenile.stm.impl.XmlFlowReader$AddEventInformationRule.processTransitionAction(XmlFlowReader.java:190)
+	at org.chenile.stm.impl.XmlFlowReader$AddTransitionRule.begin(XmlFlowReader.java:241)
+	at org.apache.commons.digester.Digester.startElement(Digester.java:1583)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:519)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(AbstractXMLDocumentParser.java:183)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2735)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:134)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1225)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.commons.digester.Digester.parse(Digester.java:1916)
+	at org.chenile.stm.impl.XmlFlowReader.parse(XmlFlowReader.java:90)
+	at org.chenile.stm.impl.XmlFlowReader.setFilename(XmlFlowReader.java:72)
+	at com.sod.doc.chatapp.configuration.ChatappConfiguration.chatappFlowReader(ChatappConfiguration.java:93)
+	at com.sod.doc.chatapp.configuration.ChatappConfiguration$$SpringCGLIB$$0.CGLIB$chatappFlowReader$10(<generated>)
+	at com.sod.doc.chatapp.configuration.ChatappConfiguration$$SpringCGLIB$$FastClass$$1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.sod.doc.chatapp.configuration.ChatappConfiguration$$SpringCGLIB$$0.chatappFlowReader(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at cucumber.runtime.java.spring.CucumberTestContextManager.getContext(SpringFactory.java:247)
+	at cucumber.runtime.java.spring.CucumberTestContextManager.<init>(SpringFactory.java:239)
+	at cucumber.runtime.java.spring.SpringFactory.start(SpringFactory.java:132)
+	at cucumber.runtime.java.JavaBackend.buildWorld(JavaBackend.java:114)
+	at cucumber.runner.Runner.buildBackendWorlds(Runner.java:129)
+	at cucumber.runner.Runner.runPickle(Runner.java:47)
+	at cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:123)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:65)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at cucumber.api.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:147)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2024-09-27 17:12:40,791 WARN  [main] AnnotationConfigServletWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatappFlowReader' defined in class path resource [com/sod/doc/chatapp/configuration/ChatappConfiguration.class]: Failed to instantiate [org.chenile.stm.impl.XmlFlowReader]: Factory method 'chatappFlowReader' threw exception with message: Error at line 22 char 94: No bean named 'createUserInChatAppCommand' available
+2024-09-27 17:12:40,804 ERROR [main] LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Method chatappFlowReader in com.sod.doc.chatapp.configuration.ChatappConfiguration required a bean named 'createUserInChatAppCommand' that could not be found.
+
+
+Action:
+
+Consider defining a bean named 'createUserInChatAppCommand' in your configuration.
+
+2024-09-27 17:18:54,523 INFO  [main] CukesSteps: Starting CukesSteps using Java 22.0.2 with PID 6947 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-27 17:18:54,523 DEBUG [main] CukesSteps: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-27 17:18:54,523 INFO  [main] CukesSteps: The following 1 profile is active: "unittest"
+2024-09-27 17:18:55,149 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-27 17:18:55,792 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-27 17:18:55,810 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+2024-09-27 17:18:55,814 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-27 17:18:55,818 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-27 17:18:55,819 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-27 17:18:55,819 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-27 17:18:55,823 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-27 17:18:55,858 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-27 17:18:56,009 ERROR [main] Digester: Begin event threw exception
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'createUserInChatAppCommand' defined in class path resource [com/sod/doc/chatapp/configuration/UserConfiguration.class]: Unsatisfied dependency expressed through method 'createUserInChatAppCommand' parameter 0: No qualifying bean of type 'com.sod.doc.chatapp.service.store.UserEntityStore' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.chenile.stm.spring.SpringBeanFactoryAdapter.getBean(SpringBeanFactoryAdapter.java:12)
+	at org.chenile.stm.impl.STMFlowStoreImpl.makeComponent(STMFlowStoreImpl.java:126)
+	at org.chenile.stm.impl.STMFlowStoreImpl.makeAction(STMFlowStoreImpl.java:135)
+	at org.chenile.stm.impl.XmlFlowReader$AddEventInformationRule.processTransitionAction(XmlFlowReader.java:190)
+	at org.chenile.stm.impl.XmlFlowReader$AddTransitionRule.begin(XmlFlowReader.java:241)
+	at org.apache.commons.digester.Digester.startElement(Digester.java:1583)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:519)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(AbstractXMLDocumentParser.java:183)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2735)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:134)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1225)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.commons.digester.Digester.parse(Digester.java:1916)
+	at org.chenile.stm.impl.XmlFlowReader.parse(XmlFlowReader.java:90)
+	at org.chenile.stm.impl.XmlFlowReader.setFilename(XmlFlowReader.java:72)
+	at com.sod.doc.chatapp.configuration.ChatappConfiguration.chatappFlowReader(ChatappConfiguration.java:93)
+	at com.sod.doc.chatapp.configuration.ChatappConfiguration$$SpringCGLIB$$0.CGLIB$chatappFlowReader$5(<generated>)
+	at com.sod.doc.chatapp.configuration.ChatappConfiguration$$SpringCGLIB$$FastClass$$1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.sod.doc.chatapp.configuration.ChatappConfiguration$$SpringCGLIB$$0.chatappFlowReader(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at cucumber.runtime.java.spring.CucumberTestContextManager.getContext(SpringFactory.java:247)
+	at cucumber.runtime.java.spring.CucumberTestContextManager.<init>(SpringFactory.java:239)
+	at cucumber.runtime.java.spring.SpringFactory.start(SpringFactory.java:132)
+	at cucumber.runtime.java.JavaBackend.buildWorld(JavaBackend.java:114)
+	at cucumber.runner.Runner.buildBackendWorlds(Runner.java:129)
+	at cucumber.runner.Runner.runPickle(Runner.java:47)
+	at cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:123)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:65)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at cucumber.api.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:147)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.sod.doc.chatapp.service.store.UserEntityStore' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1880)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1406)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 100 common frames omitted
+2024-09-27 17:18:56,010 WARN  [main] AnnotationConfigServletWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatappFlowReader' defined in class path resource [com/sod/doc/chatapp/configuration/ChatappConfiguration.class]: Failed to instantiate [org.chenile.stm.impl.XmlFlowReader]: Factory method 'chatappFlowReader' threw exception with message: Error at line 22 char 94: Error creating bean with name 'createUserInChatAppCommand' defined in class path resource [com/sod/doc/chatapp/configuration/UserConfiguration.class]: Unsatisfied dependency expressed through method 'createUserInChatAppCommand' parameter 0: No qualifying bean of type 'com.sod.doc.chatapp.service.store.UserEntityStore' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-09-27 17:18:56,026 ERROR [main] LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method createUserInChatAppCommand in com.sod.doc.chatapp.configuration.UserConfiguration required a bean of type 'com.sod.doc.chatapp.service.store.UserEntityStore' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.sod.doc.chatapp.service.store.UserEntityStore' in your configuration.
+
+2024-09-27 17:19:26,084 INFO  [main] CukesSteps: Starting CukesSteps using Java 22.0.2 with PID 6957 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-27 17:19:26,084 DEBUG [main] CukesSteps: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-27 17:19:26,084 INFO  [main] CukesSteps: The following 1 profile is active: "unittest"
+2024-09-27 17:19:26,720 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-27 17:19:27,359 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-27 17:19:27,379 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+2024-09-27 17:19:27,383 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-27 17:19:27,387 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-27 17:19:27,388 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-27 17:19:27,388 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-27 17:19:27,392 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-27 17:19:27,427 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-27 17:19:27,615 DEBUG [main] Mappings: 'webSocketHandlerMapping' {/api/chat=org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@6bc45472}
+2024-09-27 17:19:27,700 INFO  [main] CukesSteps: Started CukesSteps in 1.744 seconds (process running for 2.222)
+2024-09-27 17:19:27,704 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/chatapp/{id}=org.chenile.http.handler.HttpEntryPoint@28fa0ff8, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@726e780a, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@4698ae6, /info=org.chenile.http.handler.HttpEntryPoint@557ed49a, /chatapp/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@2d839402, /chatapp=org.chenile.http.handler.HttpEntryPoint@2c2c1790}
+2024-09-27 17:19:27,721 WARN  [main] PageNotFound: Request method 'POST' is not supported
+2024-09-27 17:19:27,722 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages]
+2024-09-27 17:19:27,722 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:19:27,722 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:19:27,722 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:19:27,723 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en_US]
+2024-09-27 17:19:27,723 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:19:27,723 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:19:27,723 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:19:27,723 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en]
+2024-09-27 17:19:27,746 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:19:27,769 DEBUG [main] Runtime: Runtime.exit() called with status: -1
+java.lang.Throwable: Runtime.exit(-1)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1925)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:56)
+2024-09-27 17:20:04,670 INFO  [main] CukesSteps: Starting CukesSteps using Java 22.0.2 with PID 6962 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-27 17:20:04,671 DEBUG [main] CukesSteps: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-27 17:20:04,671 INFO  [main] CukesSteps: The following 1 profile is active: "unittest"
+2024-09-27 17:20:05,302 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-27 17:20:05,933 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-27 17:20:05,951 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+2024-09-27 17:20:05,956 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2024-09-27 17:20:05,960 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-27 17:20:05,961 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-27 17:20:05,961 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-27 17:20:05,965 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-27 17:20:06,003 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-27 17:20:06,198 DEBUG [main] Mappings: 'webSocketHandlerMapping' {/api/chat=org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@6bc45472}
+2024-09-27 17:20:06,278 INFO  [main] CukesSteps: Started CukesSteps in 1.733 seconds (process running for 2.248)
+2024-09-27 17:20:06,282 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/chatapp/{id}=org.chenile.http.handler.HttpEntryPoint@4723445c, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@7631fb3e, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@3aede2ff, /info=org.chenile.http.handler.HttpEntryPoint@ab5c335, /chatapp/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@5769679b, /chatapp=org.chenile.http.handler.HttpEntryPoint@2ef89e43}
+2024-09-27 17:20:06,308 DEBUG [main] ChenileExceptionHandler: code = 516 locale = en
+2024-09-27 17:20:06,309 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages]
+2024-09-27 17:20:06,309 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:20:06,309 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:20:06,309 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:20:06,309 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en_US]
+2024-09-27 17:20:06,309 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:20:06,309 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:20:06,309 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:20:06,310 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en]
+2024-09-27 17:20:06,333 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:20:06,357 DEBUG [main] Runtime: Runtime.exit() called with status: -1
+java.lang.Throwable: Runtime.exit(-1)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1925)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:56)
+2024-09-27 17:21:30,943 INFO  [main] CukesSteps: Starting CukesSteps using Java 22.0.2 with PID 6981 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-27 17:21:30,943 DEBUG [main] CukesSteps: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-27 17:21:30,943 INFO  [main] CukesSteps: The following 1 profile is active: "unittest"
+2024-09-27 17:21:31,589 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-27 17:21:32,252 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-27 17:21:32,272 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+2024-09-27 17:21:32,277 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-27 17:21:32,281 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-27 17:21:32,282 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-27 17:21:32,282 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-27 17:21:32,287 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-27 17:21:32,327 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-27 17:21:32,527 DEBUG [main] Mappings: 'webSocketHandlerMapping' {/api/chat=org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@310db5c4}
+2024-09-27 17:21:32,613 INFO  [main] CukesSteps: Started CukesSteps in 1.799 seconds (process running for 2.304)
+2024-09-27 17:21:32,617 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/chatapp/{id}=org.chenile.http.handler.HttpEntryPoint@2ef89e43, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@7bd76b79, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@5fdfa35d, /info=org.chenile.http.handler.HttpEntryPoint@43165282, /chatapp/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@2976d625, /chatapp=org.chenile.http.handler.HttpEntryPoint@693afcd1}
+2024-09-27 17:21:32,648 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:21:32,649 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:21:32,717 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = org.chenile.base.exception.ErrorNumException)
+2024-09-27 17:21:32,718 DEBUG [main] ChenileExceptionHandler: code = 6002 locale = en
+2024-09-27 17:21:32,719 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages]
+2024-09-27 17:21:32,719 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:21:32,719 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:21:32,719 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:21:32,719 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en_US]
+2024-09-27 17:21:32,719 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:21:32,719 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:21:32,719 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:21:32,720 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en]
+2024-09-27 17:21:32,747 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:21:32,769 DEBUG [main] Runtime: Runtime.exit() called with status: -1
+java.lang.Throwable: Runtime.exit(-1)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1925)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:56)
+2024-09-27 17:29:14,493 INFO  [main] CukesSteps: Starting CukesSteps using Java 22.0.2 with PID 7017 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-27 17:29:14,494 DEBUG [main] CukesSteps: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-27 17:29:14,494 INFO  [main] CukesSteps: The following 1 profile is active: "unittest"
+2024-09-27 17:29:15,129 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-27 17:29:15,788 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-27 17:29:15,806 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+2024-09-27 17:29:15,810 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-27 17:29:15,815 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-27 17:29:15,815 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-27 17:29:15,816 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-27 17:29:15,820 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-27 17:29:15,856 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-27 17:29:16,047 DEBUG [main] Mappings: 'webSocketHandlerMapping' {/api/chat=org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@f41db7f}
+2024-09-27 17:29:16,130 INFO  [main] CukesSteps: Started CukesSteps in 1.76 seconds (process running for 2.23)
+2024-09-27 17:29:16,133 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/chatapp/{id}=org.chenile.http.handler.HttpEntryPoint@3f60ba06, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@251d64d6, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@4d96c290, /info=org.chenile.http.handler.HttpEntryPoint@17e96b3c, /chatapp/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@2d63534d, /chatapp=org.chenile.http.handler.HttpEntryPoint@6316b9e3}
+2024-09-27 17:29:16,161 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:29:16,161 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:29:16,226 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = org.chenile.base.exception.ErrorNumException)
+2024-09-27 17:29:16,226 DEBUG [main] ChenileExceptionHandler: code = 6002 locale = en
+2024-09-27 17:29:16,227 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages]
+2024-09-27 17:29:16,227 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:29:16,227 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:29:16,227 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:29:16,227 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en_US]
+2024-09-27 17:29:16,227 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:29:16,227 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:29:16,227 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:29:16,228 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en]
+2024-09-27 17:29:16,253 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:29:16,276 DEBUG [main] Runtime: Runtime.exit() called with status: -1
+java.lang.Throwable: Runtime.exit(-1)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1925)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:56)
+2024-09-27 17:30:09,047 INFO  [main] CukesSteps: Starting CukesSteps using Java 22.0.2 with PID 7027 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-27 17:30:09,048 DEBUG [main] CukesSteps: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-27 17:30:09,048 INFO  [main] CukesSteps: The following 1 profile is active: "unittest"
+2024-09-27 17:30:10,074 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-27 17:30:11,721 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-27 17:30:11,764 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+2024-09-27 17:30:11,774 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-27 17:30:11,782 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-27 17:30:11,783 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-27 17:30:11,784 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-27 17:30:11,792 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-27 17:30:11,882 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-27 17:30:12,321 DEBUG [main] Mappings: 'webSocketHandlerMapping' {/api/chat=org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@6285027a}
+2024-09-27 17:30:12,512 INFO  [main] CukesSteps: Started CukesSteps in 3.606 seconds (process running for 4.39)
+2024-09-27 17:30:12,518 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/chatapp/{id}=org.chenile.http.handler.HttpEntryPoint@6d89c923, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@5205b2e5, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@6717f504, /info=org.chenile.http.handler.HttpEntryPoint@3ed7fc6f, /chatapp/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@1db4ea47, /chatapp=org.chenile.http.handler.HttpEntryPoint@6259f18e}
+2024-09-27 17:30:15,905 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:30:15,906 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:30:16,088 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = org.chenile.base.exception.ErrorNumException)
+2024-09-27 17:30:16,088 DEBUG [main] ChenileExceptionHandler: code = 6002 locale = en
+2024-09-27 17:30:16,090 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages]
+2024-09-27 17:30:16,090 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:30:16,090 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:30:16,090 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:30:16,090 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en_US]
+2024-09-27 17:30:16,090 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:30:16,090 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:30:16,090 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:30:16,091 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en]
+2024-09-27 17:30:16,154 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:30:16,180 DEBUG [main] Runtime: Runtime.exit() called with status: -1
+java.lang.Throwable: Runtime.exit(-1)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1925)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:56)
+2024-09-27 17:30:24,670 INFO  [main] CukesSteps: Starting CukesSteps using Java 22.0.2 with PID 7033 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-27 17:30:24,670 DEBUG [main] CukesSteps: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-27 17:30:24,670 INFO  [main] CukesSteps: The following 1 profile is active: "unittest"
+2024-09-27 17:30:25,616 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-27 17:30:26,886 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-27 17:30:26,930 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+2024-09-27 17:30:26,939 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-27 17:30:26,949 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-27 17:30:26,950 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-27 17:30:26,951 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-27 17:30:26,957 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-27 17:30:27,027 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-27 17:30:27,456 DEBUG [main] Mappings: 'webSocketHandlerMapping' {/api/chat=org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@6fe43257}
+2024-09-27 17:30:27,643 INFO  [main] CukesSteps: Started CukesSteps in 3.104 seconds (process running for 3.664)
+2024-09-27 17:30:27,649 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/chatapp/{id}=org.chenile.http.handler.HttpEntryPoint@19b89a23, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@6d1a4522, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@1835b24b, /info=org.chenile.http.handler.HttpEntryPoint@303d2485, /chatapp/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@6d89c923, /chatapp=org.chenile.http.handler.HttpEntryPoint@5205b2e5}
+2024-09-27 17:30:32,437 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:30:32,438 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:33:17,559 WARN  [Hikari housekeeper] HikariPool: Hikari - Thread starvation or clock leap detected (housekeeper delta=2m17s691ms).
+2024-09-27 17:33:17,578 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = org.chenile.base.exception.ErrorNumException)
+2024-09-27 17:33:17,579 DEBUG [main] ChenileExceptionHandler: code = 6002 locale = en
+2024-09-27 17:33:17,584 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages]
+2024-09-27 17:33:17,585 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:33:17,585 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:33:17,585 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:33:17,586 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en_US]
+2024-09-27 17:33:17,586 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:33:17,587 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:33:17,587 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:33:17,587 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en]
+2024-09-27 17:33:17,612 DEBUG [SIGINT handler] Runtime: Runtime.exit() called with status: 130
+java.lang.Throwable: Runtime.exit(130)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Terminator$1.handle(Terminator.java:51)
+	at java.base/jdk.internal.misc.Signal$1.run(Signal.java:218)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2024-09-27 17:33:19,862 INFO  [main] CukesSteps: Starting CukesSteps using Java 22.0.2 with PID 7049 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-27 17:33:19,863 DEBUG [main] CukesSteps: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-27 17:33:19,863 INFO  [main] CukesSteps: The following 1 profile is active: "unittest"
+2024-09-27 17:33:20,506 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-27 17:33:21,183 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-27 17:33:21,201 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+2024-09-27 17:33:21,205 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-27 17:33:21,209 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-27 17:33:21,210 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-27 17:33:21,210 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-27 17:33:21,214 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-27 17:33:21,248 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-27 17:33:21,436 DEBUG [main] Mappings: 'webSocketHandlerMapping' {/api/chat=org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@f41db7f}
+2024-09-27 17:33:21,522 INFO  [main] CukesSteps: Started CukesSteps in 1.772 seconds (process running for 2.261)
+2024-09-27 17:33:21,526 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/chatapp/{id}=org.chenile.http.handler.HttpEntryPoint@3f60ba06, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@251d64d6, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@4d96c290, /info=org.chenile.http.handler.HttpEntryPoint@17e96b3c, /chatapp/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@2d63534d, /chatapp=org.chenile.http.handler.HttpEntryPoint@6316b9e3}
+2024-09-27 17:33:21,553 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:33:21,553 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:33:21,621 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:33:21,621 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:33:21,652 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:33:21,654 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-27 17:33:21,659 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-27 17:33:21,670 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:33:21,670 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-27 17:33:21,670 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-27 17:33:21,670 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['openedBy']
+2024-09-27 17:33:21,677 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 17:33:21,678 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 17:33:21,679 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages]
+2024-09-27 17:33:21,679 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:33:21,679 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:33:21,679 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:33:21,679 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en_US]
+2024-09-27 17:33:21,679 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:33:21,679 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:33:21,679 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:33:21,679 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en]
+2024-09-27 17:33:21,683 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:33:21,689 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 17:33:21,689 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 17:33:21,690 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:33:21,694 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 17:33:21,694 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 17:33:21,695 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:33:21,699 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 17:33:21,699 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 17:33:21,700 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:33:21,705 DEBUG [main] Runtime: Runtime.exit() called with status: -1
+java.lang.Throwable: Runtime.exit(-1)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1925)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:56)
+2024-09-27 17:46:54,905 INFO  [main] CukesSteps: Starting CukesSteps using Java 22.0.2 with PID 7228 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-27 17:46:54,906 DEBUG [main] CukesSteps: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-27 17:46:54,906 INFO  [main] CukesSteps: The following 1 profile is active: "unittest"
+2024-09-27 17:46:55,617 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-27 17:46:56,303 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-27 17:46:56,323 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+2024-09-27 17:46:56,327 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-27 17:46:56,331 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-27 17:46:56,332 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-27 17:46:56,332 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-27 17:46:56,339 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-27 17:46:56,377 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-27 17:46:56,570 DEBUG [main] Mappings: 'webSocketHandlerMapping' {/api/chat=org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@1264dbc9}
+2024-09-27 17:46:56,652 INFO  [main] CukesSteps: Started CukesSteps in 1.87 seconds (process running for 2.352)
+2024-09-27 17:46:56,655 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/chatapp/{id}=org.chenile.http.handler.HttpEntryPoint@33c5d3e, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@45fdd38d, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@376b6d7d, /info=org.chenile.http.handler.HttpEntryPoint@e934485, /chatapp/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@6f272dc4, /chatapp=org.chenile.http.handler.HttpEntryPoint@446dea16}
+2024-09-27 17:46:56,682 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:46:56,682 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:46:56,751 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = org.chenile.base.exception.ErrorNumException)
+2024-09-27 17:46:56,751 DEBUG [main] ChenileExceptionHandler: code = 6002 locale = en
+2024-09-27 17:46:56,752 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages]
+2024-09-27 17:46:56,752 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:46:56,752 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:46:56,753 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:46:56,753 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en_US]
+2024-09-27 17:46:56,753 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:46:56,753 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:46:56,753 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:46:56,753 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en]
+2024-09-27 17:46:56,778 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:46:56,799 DEBUG [main] Runtime: Runtime.exit() called with status: -1
+java.lang.Throwable: Runtime.exit(-1)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1925)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:56)
+2024-09-27 17:50:17,838 INFO  [main] CukesSteps: Starting CukesSteps using Java 22.0.2 with PID 7364 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-27 17:50:17,838 DEBUG [main] CukesSteps: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-27 17:50:17,839 INFO  [main] CukesSteps: The following 1 profile is active: "unittest"
+2024-09-27 17:50:18,563 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-27 17:50:19,297 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-27 17:50:19,316 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+2024-09-27 17:50:19,321 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-27 17:50:19,325 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-27 17:50:19,326 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-27 17:50:19,327 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-27 17:50:19,331 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-27 17:50:19,369 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-27 17:50:19,602 DEBUG [main] Mappings: 'webSocketHandlerMapping' {/api/chat=org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@7c5c53e5}
+2024-09-27 17:50:19,691 INFO  [main] CukesSteps: Started CukesSteps in 2.007 seconds (process running for 2.521)
+2024-09-27 17:50:19,695 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/chatapp/{id}=org.chenile.http.handler.HttpEntryPoint@7fbe0f64, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@d0971cd, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@53b42a0d, /info=org.chenile.http.handler.HttpEntryPoint@cf6a6eb, /chatapp/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@33c5d3e, /chatapp=org.chenile.http.handler.HttpEntryPoint@45fdd38d}
+2024-09-27 17:50:19,724 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:50:19,724 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:50:19,795 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:50:19,795 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:50:19,830 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:50:19,831 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-27 17:50:19,836 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-27 17:50:19,848 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:50:19,848 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-27 17:50:19,848 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-27 17:50:19,848 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['openedBy']
+2024-09-27 17:50:19,854 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 17:50:19,855 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 17:50:19,856 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages]
+2024-09-27 17:50:19,856 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:50:19,856 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:50:19,856 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:50:19,856 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en_US]
+2024-09-27 17:50:19,857 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:50:19,857 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:50:19,857 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:50:19,857 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en]
+2024-09-27 17:50:19,861 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:50:19,865 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 17:50:19,865 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 17:50:19,866 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:50:19,869 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 17:50:19,870 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 17:50:19,871 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:50:19,874 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 17:50:19,874 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 17:50:19,875 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:50:19,879 DEBUG [main] Runtime: Runtime.exit() called with status: -1
+java.lang.Throwable: Runtime.exit(-1)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1925)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:56)
+2024-09-27 17:53:37,919 INFO  [main] CukesSteps: Starting CukesSteps using Java 22.0.2 with PID 7399 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-27 17:53:37,920 DEBUG [main] CukesSteps: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-27 17:53:37,920 INFO  [main] CukesSteps: The following 1 profile is active: "unittest"
+2024-09-27 17:53:38,902 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-27 17:53:39,491 ERROR [main] LocalContainerEntityManagerFactoryBean: Failed to initialize JPA EntityManagerFactory: Collection 'com.sod.doc.chatapp.model.domain.Chatapp.users' is 'mappedBy' a property named 'chatapp' which does not exist in the target entity 'com.sod.doc.chatapp.model.domain.Users'
+2024-09-27 17:53:39,492 WARN  [main] AnnotationConfigServletWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'com.sod.doc.chatapp.model.domain.Chatapp.users' is 'mappedBy' a property named 'chatapp' which does not exist in the target entity 'com.sod.doc.chatapp.model.domain.Users'
+2024-09-27 17:53:39,523 ERROR [main] SpringApplication: Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'com.sod.doc.chatapp.model.domain.Chatapp.users' is 'mappedBy' a property named 'chatapp' which does not exist in the target entity 'com.sod.doc.chatapp.model.domain.Users'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at cucumber.runtime.java.spring.CucumberTestContextManager.getContext(SpringFactory.java:247)
+	at cucumber.runtime.java.spring.CucumberTestContextManager.<init>(SpringFactory.java:239)
+	at cucumber.runtime.java.spring.SpringFactory.start(SpringFactory.java:132)
+	at cucumber.runtime.java.JavaBackend.buildWorld(JavaBackend.java:114)
+	at cucumber.runner.Runner.buildBackendWorlds(Runner.java:129)
+	at cucumber.runner.Runner.runPickle(Runner.java:47)
+	at cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:123)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:65)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at cucumber.api.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:147)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.hibernate.AnnotationException: Collection 'com.sod.doc.chatapp.model.domain.Chatapp.users' is 'mappedBy' a property named 'chatapp' which does not exist in the target entity 'com.sod.doc.chatapp.model.domain.Users'
+	at org.hibernate.boot.model.internal.CollectionBinder.isReversePropertyInJoin(CollectionBinder.java:1622)
+	at org.hibernate.boot.model.internal.CollectionBinder.noAssociationTable(CollectionBinder.java:1636)
+	at org.hibernate.boot.model.internal.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:1597)
+	at org.hibernate.boot.model.internal.CollectionBinder$1.secondPass(CollectionBinder.java:1588)
+	at org.hibernate.boot.model.internal.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1815)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1774)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:332)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 57 common frames omitted
+2024-09-27 17:54:05,442 INFO  [main] CukesSteps: Starting CukesSteps using Java 22.0.2 with PID 7409 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-27 17:54:05,442 DEBUG [main] CukesSteps: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-27 17:54:05,443 INFO  [main] CukesSteps: The following 1 profile is active: "unittest"
+2024-09-27 17:54:06,075 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-27 17:54:06,758 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-27 17:54:06,777 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+2024-09-27 17:54:06,782 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2024-09-27 17:54:06,787 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-27 17:54:06,788 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-27 17:54:06,788 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-27 17:54:06,793 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-27 17:54:06,831 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-27 17:54:07,031 DEBUG [main] Mappings: 'webSocketHandlerMapping' {/api/chat=org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@28e12bc5}
+2024-09-27 17:54:07,117 INFO  [main] CukesSteps: Started CukesSteps in 1.801 seconds (process running for 2.284)
+2024-09-27 17:54:07,121 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/chatapp/{id}=org.chenile.http.handler.HttpEntryPoint@f1f41b5, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@154ea177, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@30c0993e, /info=org.chenile.http.handler.HttpEntryPoint@12de62aa, /chatapp/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@67398bad, /chatapp=org.chenile.http.handler.HttpEntryPoint@71cdb24}
+2024-09-27 17:54:07,148 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:54:07,148 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:54:07,219 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:54:07,219 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 17:54:07,252 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:54:07,253 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-27 17:54:07,258 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-27 17:54:07,271 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:54:07,271 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-27 17:54:07,271 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-27 17:54:07,271 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['openedBy']
+2024-09-27 17:54:07,277 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 17:54:07,278 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 17:54:07,279 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages]
+2024-09-27 17:54:07,279 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:54:07,279 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:54:07,279 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 17:54:07,279 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en_US]
+2024-09-27 17:54:07,279 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:54:07,279 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:54:07,279 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 17:54:07,280 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en]
+2024-09-27 17:54:07,283 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:54:07,289 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 17:54:07,289 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 17:54:07,290 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:54:07,293 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 17:54:07,293 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 17:54:07,294 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:54:07,297 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 17:54:07,297 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 17:54:07,298 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 17:54:07,303 DEBUG [main] Runtime: Runtime.exit() called with status: -1
+java.lang.Throwable: Runtime.exit(-1)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1925)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:56)
+2024-09-27 23:49:30,601 INFO  [main] CukesSteps: Starting CukesSteps using Java 22.0.2 with PID 8511 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-27 23:49:30,602 DEBUG [main] CukesSteps: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-27 23:49:30,602 INFO  [main] CukesSteps: The following 1 profile is active: "unittest"
+2024-09-27 23:49:31,281 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-27 23:49:31,983 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-27 23:49:32,004 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+2024-09-27 23:49:32,008 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2024-09-27 23:49:32,012 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-27 23:49:32,013 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-27 23:49:32,013 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-27 23:49:32,017 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-27 23:49:32,055 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-27 23:49:32,252 DEBUG [main] Mappings: 'webSocketHandlerMapping' {/api/chat=org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@5453020f}
+2024-09-27 23:49:32,338 INFO  [main] CukesSteps: Started CukesSteps in 1.879 seconds (process running for 2.435)
+2024-09-27 23:49:32,343 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/chatapp/{id}=org.chenile.http.handler.HttpEntryPoint@48186ba8, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@286f8e90, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@26c84006, /info=org.chenile.http.handler.HttpEntryPoint@4ea8832c, /chatapp/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@45e6f47a, /chatapp=org.chenile.http.handler.HttpEntryPoint@11a9f958}
+2024-09-27 23:49:32,371 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 23:49:32,372 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 23:49:32,442 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 23:49:32,443 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 23:49:32,477 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 23:49:32,479 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-27 23:49:32,484 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-27 23:49:32,489 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 23:49:32,489 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 23:49:32,493 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = org.chenile.base.exception.ErrorNumException)
+2024-09-27 23:49:32,493 DEBUG [main] ChenileExceptionHandler: code = 6002 locale = en
+2024-09-27 23:49:32,495 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages]
+2024-09-27 23:49:32,495 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 23:49:32,495 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 23:49:32,495 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 23:49:32,495 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en_US]
+2024-09-27 23:49:32,495 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 23:49:32,495 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 23:49:32,495 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 23:49:32,496 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en]
+2024-09-27 23:49:32,500 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 23:49:32,511 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 23:49:32,511 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-27 23:49:32,512 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-27 23:49:32,512 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['openedBy']
+2024-09-27 23:49:32,517 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 23:49:32,518 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 23:49:32,519 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 23:49:32,523 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 23:49:32,523 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 23:49:32,524 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 23:49:32,527 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 23:49:32,527 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 23:49:32,528 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 23:49:32,531 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 23:49:32,531 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 23:49:32,532 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 23:49:32,536 DEBUG [main] Runtime: Runtime.exit() called with status: -1
+java.lang.Throwable: Runtime.exit(-1)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1925)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:56)
+2024-09-27 23:49:59,545 INFO  [main] CukesSteps: Starting CukesSteps using Java 22.0.2 with PID 8524 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-27 23:49:59,545 DEBUG [main] CukesSteps: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-27 23:49:59,545 INFO  [main] CukesSteps: The following 1 profile is active: "unittest"
+2024-09-27 23:50:00,170 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-27 23:50:00,832 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-27 23:50:00,851 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+2024-09-27 23:50:00,855 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-27 23:50:00,860 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-27 23:50:00,861 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-27 23:50:00,861 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-27 23:50:00,866 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-27 23:50:00,903 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-27 23:50:01,103 DEBUG [main] Mappings: 'webSocketHandlerMapping' {/api/chat=org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@3787eac3}
+2024-09-27 23:50:01,190 INFO  [main] CukesSteps: Started CukesSteps in 1.773 seconds (process running for 2.317)
+2024-09-27 23:50:01,195 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/chatapp/{id}=org.chenile.http.handler.HttpEntryPoint@7585531b, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@7fbe0f64, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@d0971cd, /info=org.chenile.http.handler.HttpEntryPoint@53b42a0d, /chatapp/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@cf6a6eb, /chatapp=org.chenile.http.handler.HttpEntryPoint@33c5d3e}
+2024-09-27 23:50:01,222 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 23:50:01,223 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 23:50:01,291 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 23:50:01,291 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 23:50:01,324 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 23:50:01,326 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-27 23:50:01,331 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-27 23:50:01,335 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 23:50:01,335 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 23:50:01,339 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = org.chenile.base.exception.ErrorNumException)
+2024-09-27 23:50:01,339 DEBUG [main] ChenileExceptionHandler: code = 6002 locale = en
+2024-09-27 23:50:01,343 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages]
+2024-09-27 23:50:01,343 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 23:50:01,343 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 23:50:01,343 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 23:50:01,343 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en_US]
+2024-09-27 23:50:01,343 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 23:50:01,343 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 23:50:01,343 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 23:50:01,344 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en]
+2024-09-27 23:50:01,347 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 23:50:01,358 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 23:50:01,358 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-27 23:50:01,358 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-27 23:50:01,358 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['openedBy']
+2024-09-27 23:50:01,364 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 23:50:01,364 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 23:50:01,365 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 23:50:01,369 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 23:50:01,369 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 23:50:01,371 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 23:50:01,374 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 23:50:01,375 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 23:50:01,375 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 23:50:01,379 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 23:50:01,379 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 23:50:01,379 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 23:50:01,383 DEBUG [main] Runtime: Runtime.exit() called with status: -1
+java.lang.Throwable: Runtime.exit(-1)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1925)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:56)
+2024-09-27 23:59:22,270 INFO  [main] CukesSteps: Starting CukesSteps using Java 22.0.2 with PID 8614 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-27 23:59:22,270 DEBUG [main] CukesSteps: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-27 23:59:22,271 INFO  [main] CukesSteps: The following 1 profile is active: "unittest"
+2024-09-27 23:59:22,941 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-27 23:59:23,875 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-27 23:59:23,901 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+2024-09-27 23:59:23,906 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2024-09-27 23:59:23,912 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-27 23:59:23,913 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-27 23:59:23,914 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-27 23:59:23,919 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-27 23:59:23,956 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-27 23:59:24,171 DEBUG [main] Mappings: 'webSocketHandlerMapping' {/api/chat=org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@3787eac3}
+2024-09-27 23:59:24,252 INFO  [main] CukesSteps: Started CukesSteps in 2.109 seconds (process running for 2.607)
+2024-09-27 23:59:24,256 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/chatapp/{id}=org.chenile.http.handler.HttpEntryPoint@7585531b, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@7fbe0f64, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@d0971cd, /info=org.chenile.http.handler.HttpEntryPoint@53b42a0d, /chatapp/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@cf6a6eb, /chatapp=org.chenile.http.handler.HttpEntryPoint@33c5d3e}
+2024-09-27 23:59:24,283 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 23:59:24,284 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 23:59:24,353 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 23:59:24,353 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 23:59:24,389 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 23:59:24,391 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-27 23:59:24,397 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-27 23:59:24,401 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 23:59:24,401 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-27 23:59:24,405 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = Email already exist (type = com.sod.doc.chatapp.exception.UserServiceException)
+2024-09-27 23:59:24,409 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 23:59:24,420 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 23:59:24,420 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-27 23:59:24,420 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-27 23:59:24,421 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['openedBy']
+2024-09-27 23:59:24,426 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 23:59:24,427 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 23:59:24,428 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages]
+2024-09-27 23:59:24,428 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 23:59:24,428 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 23:59:24,428 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-27 23:59:24,428 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en_US]
+2024-09-27 23:59:24,428 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 23:59:24,428 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 23:59:24,428 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-27 23:59:24,429 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en]
+2024-09-27 23:59:24,430 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 23:59:24,434 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 23:59:24,435 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 23:59:24,435 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 23:59:24,438 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 23:59:24,439 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 23:59:24,439 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 23:59:24,443 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = java.lang.AssertionError)
+2024-09-27 23:59:24,443 DEBUG [main] ChenileExceptionHandler: code = 509 locale = en
+2024-09-27 23:59:24,444 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-27 23:59:24,448 DEBUG [main] Runtime: Runtime.exit() called with status: -1
+java.lang.Throwable: Runtime.exit(-1)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1925)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:56)

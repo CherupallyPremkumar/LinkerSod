@@ -1,0 +1,80 @@
+2024-09-17 00:02:02,241 INFO  [main] CukesSteps: Starting CukesSteps using Java 22.0.2 with PID 49929 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-09-17 00:02:02,242 DEBUG [main] CukesSteps: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-17 00:02:02,242 INFO  [main] CukesSteps: The following 1 profile is active: "unittest"
+2024-09-17 00:02:03,245 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-17 00:02:04,402 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-17 00:02:04,434 DEBUG [main] Mappings: 
+	c.s.d.c.c.c.ChatappController:
+	{POST [/chatapp]}: create(HttpServletRequest,Chatapp)
+	{GET [/chatapp/{id}]}: retrieve(HttpServletRequest,String)
+	{PUT [/chatapp/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+2024-09-17 00:02:04,440 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-17 00:02:04,447 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-17 00:02:04,448 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-17 00:02:04,448 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-17 00:02:04,453 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-17 00:02:04,516 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-17 00:02:04,934 INFO  [main] CukesSteps: Started CukesSteps in 2.95 seconds (process running for 3.87)
+2024-09-17 00:02:04,938 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/chatapp/{id}=org.chenile.http.handler.HttpEntryPoint@235e73b0, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@59c5d59e, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@6213104f, /info=org.chenile.http.handler.HttpEntryPoint@53732788, /chatapp/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@3601da5, /chatapp=org.chenile.http.handler.HttpEntryPoint@74fe4172}
+2024-09-17 00:02:05,002 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-17 00:02:05,002 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-17 00:02:05,084 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-17 00:02:05,086 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-17 00:02:05,095 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-17 00:02:05,095 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['openedBy']
+2024-09-17 00:02:05,096 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['description']
+2024-09-17 00:02:05,140 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-17 00:02:05,140 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-17 00:02:05,140 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-17 00:02:05,140 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['openedBy']
+2024-09-17 00:02:05,147 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::ASSIGNED
+2024-09-17 00:02:05,147 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::ASSIGNED
+2024-09-17 00:02:05,155 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-17 00:02:05,155 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-17 00:02:05,155 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-17 00:02:05,155 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['assignee']
+2024-09-17 00:02:05,155 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['assignComment']
+2024-09-17 00:02:05,160 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::RESOLVED
+2024-09-17 00:02:05,160 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::RESOLVED
+2024-09-17 00:02:05,163 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-17 00:02:05,163 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-17 00:02:05,164 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-17 00:02:05,164 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['resolveComment']
+2024-09-17 00:02:05,168 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::CLOSED
+2024-09-17 00:02:05,168 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::CLOSED
+2024-09-17 00:02:05,170 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-17 00:02:05,171 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-17 00:02:05,171 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-17 00:02:05,171 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['closeComment']
+2024-09-17 00:02:05,177 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = null (type = org.chenile.base.exception.ErrorNumException)
+2024-09-17 00:02:05,177 DEBUG [main] ChenileExceptionHandler: code = 6001 locale = en
+2024-09-17 00:02:05,178 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages]
+2024-09-17 00:02:05,178 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-17 00:02:05,178 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-17 00:02:05,178 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-17 00:02:05,179 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en_US]
+2024-09-17 00:02:05,179 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-17 00:02:05,179 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-17 00:02:05,179 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-17 00:02:05,179 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en]
+2024-09-17 00:02:05,187 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-17 00:02:05,208 DEBUG [main] Runtime: Runtime.exit() called with status: 0
+java.lang.Throwable: Runtime.exit(0)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1925)
+	at org.apache.maven.surefire.booter.ForkedBooter.acknowledgedExit(ForkedBooter.java:381)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:178)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)

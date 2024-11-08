@@ -42,7 +42,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>com.sod.doc.chatapp</groupId>
+            <artifactId>chatapp-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.sod.doc.chatapp</groupId>
+            <artifactId>chatapp-service</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

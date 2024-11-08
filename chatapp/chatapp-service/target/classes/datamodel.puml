@@ -1,0 +1,72 @@
+@startuml
+' Define database
+entity "Users" as users {
+  *id : INT [PK]
+  --
+  *username : VARCHAR(255) [UNIQUE, NOT NULL]
+  password : VARCHAR(255) [NOT NULL]
+  email : VARCHAR(255) [UNIQUE, NOT NULL]
+  full_name : VARCHAR(255)
+  avatar_url : VARCHAR(255)
+  status : VARCHAR(20) [default: 'offline']
+  created_at : TIMESTAMP [default: CURRENT_TIMESTAMP]
+  last_login : TIMESTAMP
+}
+
+entity "Friends" as friends {
+  *user_id : INT [FK -> users.id]
+  *friend_id : INT [FK -> users.id]
+  --
+  status : VARCHAR(20) [default: 'pending']  ' pending, accepted, blocked
+  created_at : TIMESTAMP [default: CURRENT_TIMESTAMP]
+  friend_since : TIMESTAMP
+}
+
+entity "Messages" as messages {
+  *id : INT [PK]
+  --
+  *sender_id : INT [FK -> users.id]
+  *receiver_id : INT [FK -> users.id]   ' Can be user or group
+  content : TEXT
+  content_type : VARCHAR(20) [default: 'text']  ' text, image, file, etc.
+  status : VARCHAR(20) [default: 'sent']  ' sent, delivered, seen
+  sent_at : TIMESTAMP [default: CURRENT_TIMESTAMP]
+  delivered_at : TIMESTAMP
+  seen_at : TIMESTAMP
+}
+
+entity "Groups" as groups {
+  *id : INT [PK]
+  --
+  *group_name : VARCHAR(255) [NOT NULL]
+  group_description : TEXT
+  admin_id : INT [FK -> users.id]
+  created_at : TIMESTAMP [default: CURRENT_TIMESTAMP]
+}
+
+entity "GroupMembers" as group_members {
+  *group_id : INT [FK -> groups.id]
+  *user_id : INT [FK -> users.id]
+  --
+  role : VARCHAR(20) [default: 'member']  ' admin, member
+  added_at : TIMESTAMP [default: CURRENT_TIMESTAMP]
+}
+
+entity "GroupMessages" as group_messages {
+  *id : INT [PK]
+  --
+  *group_id : INT [FK -> groups.id]
+  *sender_id : INT [FK -> users.id]
+  content : TEXT
+  content_type : VARCHAR(20) [default: 'text']
+  sent_at : TIMESTAMP [default: CURRENT_TIMESTAMP]
+}
+
+' Relationships
+users ||--o{ friends : "friendship"
+users ||--o{ messages : "sends"
+users ||--o{ group_members : "belongs to"
+groups ||--o{ group_members : "contains"
+groups ||--o{ group_messages : "contains"
+
+@enduml

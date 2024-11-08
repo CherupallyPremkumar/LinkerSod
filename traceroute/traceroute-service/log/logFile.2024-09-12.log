@@ -1,0 +1,89 @@
+2024-09-12 22:38:10,268 INFO  [main] CukesSteps: Starting CukesSteps using Java 22.0.2 with PID 21236 (started by premkumar in /Users/premkumar/LinkerSod/traceroute/traceroute-service)
+2024-09-12 22:38:10,268 DEBUG [main] CukesSteps: Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-09-12 22:38:10,268 INFO  [main] CukesSteps: The following 1 profile is active: "unittest"
+2024-09-12 22:38:10,873 DEBUG [RMI TCP Connection(1)-127.0.0.1] loader: RMI TCP Connection(1)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2024-09-12 22:38:10,874 DEBUG [RMI TCP Connection(1)-127.0.0.1] rmi: connectionId=rmi://127.0.0.1  1, name=java.lang:type=OperatingSystem, attribute=ProcessCpuLoad
+2024-09-12 22:38:10,874 DEBUG [RMI TCP Connection(1)-127.0.0.1] loader: RMI TCP Connection(1)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2024-09-12 22:38:10,874 DEBUG [RMI TCP Connection(1)-127.0.0.1] rmi: connectionId=rmi://127.0.0.1  1, name=java.lang:type=Memory, attribute=HeapMemoryUsage
+2024-09-12 22:38:10,875 DEBUG [RMI TCP Connection(1)-127.0.0.1] loader: RMI TCP Connection(1)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2024-09-12 22:38:10,875 DEBUG [RMI TCP Connection(1)-127.0.0.1] rmi: connectionId=rmi://127.0.0.1  1, name=java.lang:type=Memory, attribute=HeapMemoryUsage
+2024-09-12 22:38:10,949 DEBUG [main] logging: Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2024-09-12 22:38:11,644 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-12 22:38:11,675 DEBUG [main] Mappings: 
+	c.s.d.t.c.c.TracerouteController:
+	{POST [/traceroute]}: create(HttpServletRequest,Traceroute)
+	{GET [/traceroute/{id}]}: retrieve(HttpServletRequest,String)
+	{PUT [/traceroute/{id}/{eventID}]}: processById(HttpServletRequest,String,String,String)
+2024-09-12 22:38:11,680 DEBUG [main] Mappings: 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-09-12 22:38:11,689 DEBUG [main] Mappings: 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2024-09-12 22:38:11,690 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2024-09-12 22:38:11,691 DEBUG [main] Mappings: 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2024-09-12 22:38:11,698 DEBUG [main] Mappings: 'beanNameHandlerMapping' {}
+2024-09-12 22:38:11,747 DEBUG [main] Mappings: 'resourceHandlerMapping' {/swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+2024-09-12 22:38:11,878 DEBUG [RMI TCP Connection(1)-127.0.0.1] loader: RMI TCP Connection(1)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2024-09-12 22:38:11,878 DEBUG [RMI TCP Connection(1)-127.0.0.1] rmi: connectionId=rmi://127.0.0.1  1, name=java.lang:type=OperatingSystem, attribute=ProcessCpuLoad
+2024-09-12 22:38:11,879 DEBUG [RMI TCP Connection(1)-127.0.0.1] loader: RMI TCP Connection(1)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2024-09-12 22:38:11,879 DEBUG [RMI TCP Connection(1)-127.0.0.1] rmi: connectionId=rmi://127.0.0.1  1, name=java.lang:type=Memory, attribute=HeapMemoryUsage
+2024-09-12 22:38:11,880 DEBUG [RMI TCP Connection(1)-127.0.0.1] loader: RMI TCP Connection(1)-127.0.0.1: name = "javax.management.ObjectName", codebase = ""
+2024-09-12 22:38:11,880 DEBUG [RMI TCP Connection(1)-127.0.0.1] rmi: connectionId=rmi://127.0.0.1  1, name=java.lang:type=Memory, attribute=HeapMemoryUsage
+2024-09-12 22:38:12,001 INFO  [main] CukesSteps: Started CukesSteps in 1.915 seconds (process running for 2.667)
+2024-09-12 22:38:12,005 DEBUG [main] Mappings: 'simpleUrlHandlerMapping' {/traceroute/{id}=org.chenile.http.handler.HttpEntryPoint@17d3bf09, /health-check/{service}=org.chenile.http.handler.HttpEntryPoint@a49995f, /service-info/{service}=org.chenile.http.handler.HttpEntryPoint@2cb95c6c, /traceroute/{id}/{eventID}=org.chenile.http.handler.HttpEntryPoint@1484cb57, /info=org.chenile.http.handler.HttpEntryPoint@1e250539, /traceroute=org.chenile.http.handler.HttpEntryPoint@5860e4c3}
+2024-09-12 22:38:12,032 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-12 22:38:12,032 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-09-12 22:38:12,083 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-12 22:38:12,085 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-12 22:38:12,092 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-12 22:38:12,092 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['openedBy']
+2024-09-12 22:38:12,092 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['description']
+2024-09-12 22:38:12,119 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-12 22:38:12,119 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-12 22:38:12,120 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-12 22:38:12,120 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['openedBy']
+2024-09-12 22:38:12,126 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::ASSIGNED
+2024-09-12 22:38:12,126 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::ASSIGNED
+2024-09-12 22:38:12,132 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-12 22:38:12,132 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-12 22:38:12,132 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-12 22:38:12,132 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['assignee']
+2024-09-12 22:38:12,132 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['assignComment']
+2024-09-12 22:38:12,136 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::RESOLVED
+2024-09-12 22:38:12,136 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::RESOLVED
+2024-09-12 22:38:12,138 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-12 22:38:12,138 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-12 22:38:12,138 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-12 22:38:12,139 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['resolveComment']
+2024-09-12 22:38:12,143 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::CLOSED
+2024-09-12 22:38:12,143 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::CLOSED
+2024-09-12 22:38:12,144 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-12 22:38:12,145 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['id']
+2024-09-12 22:38:12,145 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['currentState']['stateId']
+2024-09-12 22:38:12,145 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']['closeComment']
+2024-09-12 22:38:12,149 INFO  [main] ServiceInvoker: Error while executing service _tracerouteStateEntityService_.processById. Message = null (type = org.chenile.base.exception.ErrorNumException)
+2024-09-12 22:38:12,149 DEBUG [main] ChenileExceptionHandler: code = 6001 locale = en
+2024-09-12 22:38:12,150 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages]
+2024-09-12 22:38:12,150 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-12 22:38:12,150 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-12 22:38:12,150 DEBUG [main] MultipleMessageSource: Loading properties [messages_en_US.properties]
+2024-09-12 22:38:12,150 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en_US]
+2024-09-12 22:38:12,150 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-12 22:38:12,150 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-12 22:38:12,150 DEBUG [main] MultipleMessageSource: Loading properties [messages_en.properties]
+2024-09-12 22:38:12,151 DEBUG [main] MultipleMessageSource: No properties file found for [classpath*:messages_en]
+2024-09-12 22:38:12,154 DEBUG [main] CompiledPath: Evaluating path: $['payload']['mutatedEntity']
+2024-09-12 22:38:12,159 DEBUG [main] Runtime: Runtime.exit() called with status: 0
+java.lang.Throwable: Runtime.exit(0)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1925)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:56)

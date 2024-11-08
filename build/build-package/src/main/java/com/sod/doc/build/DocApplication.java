@@ -22,13 +22,18 @@ import java.util.Optional;
 
 
 @SpringBootApplication(scanBasePackages = { "org.chenile.**","com.sod.doc.**" })
-@EnableJpaRepositories(basePackages = "com.sod.doc.contentreader.repository")
-@EntityScan(basePackages = "com.sod.doc.contentreader.model")
+@EnableJpaRepositories(basePackages = {
+        "com.sod.doc.contentreader.repository",
+        "com.sod.doc.chatapp.configuration.dao" // Add the correct base package for your ChatappRepository
+})
+@EntityScan(basePackages = {
+        "com.sod.doc.contentreader.model",
+        "com.sod.doc.chatapp.model"  // Add entity packages if necessary
+})
 public class DocApplication extends SpringBootServletInitializer {
     private static final Logger log = LoggerFactory.getLogger(DocApplication.class);
 
     private final Environment env;
-
     public DocApplication(Environment env) {
         this.env = env;
     }

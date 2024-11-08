@@ -5,7 +5,10 @@ logging:
     org.chenile.*: DEBUG
 
 spring:
-
+  oauth2:
+    resourceserver:
+      jwt:
+        jwk-set-uri: http://localhost:8180/realms/chatapp/protocol/openid-connect/certs
   h2:
     console:
       enabled: true        # Enable the H2 console
@@ -31,10 +34,15 @@ spring:
     hikari:
       poolName: Hikari
       auto-commit: false
+  jpa:
+    hibernate:
+      ddl-auto: update # or create-drop if you want the schema to be dropped after the app stops
+    show-sql: true
 
-  liquibase:
-    # Remove 'faker' if you do not want the sample data to be loaded automatically
-    contexts: dev, faker
+
+liquibase:
+  enabled: true  # Ensure Liquibase is enabled
+  change-log: classpath:changelog/changelog-master.xml  # Point to your master changelog file
 
   messages:
     cache-duration: PT1S # 1 second, see the ISO 8601 standard
@@ -48,5 +56,18 @@ server:
       enabled: false
 url:
   prefix:
-    link: http://172.169.90.147/
+    link: localhost:8001/
+
+
+chenile:
+  security:
+    client:
+      id: "chatapp"
+      secret: "c6qJQKUjGjfQG6wZoU7rCX79CkdtGJdn"
+    keycloak:
+      host: "localhost"
+      port: 8188
+      base:
+        realm: chatapp
+
 

@@ -1,0 +1,33 @@
+@startuml
+title WebSocket and STOMP Flow Diagram
+
+actor Client
+participant "WebSocket Server" as WS_Server
+participant "STOMP Broker" as STOMP_Broker
+
+Client -> WS_Server: HTTP Request (Upgrade)
+WS_Server -> Client: 101 Switching Protocols
+Client -> WS_Server: STOMP CONNECT
+WS_Server -> Client: STOMP CONNECTED
+
+Client -> WS_Server: STOMP SEND (Message)
+WS_Server -> STOMP_Broker: Route Message
+STOMP_Broker -> WS_Server: Send to Subscribers
+WS_Server -> Client: STOMP MESSAGE (Message)
+
+Client -> WS_Server: STOMP SUBSCRIBE (Topic)
+WS_Server -> Client: STOMP SUBSCRIBED
+
+Client -> WS_Server: STOMP ACK (Message ID)
+WS_Server -> STOMP_Broker: Acknowledge Message
+
+Client -> WS_Server: STOMP DISCONNECT
+WS_Server -> Client: STOMP DISCONNECTED
+WS_Server -> Client: Close WebSocket Connection
+
+note right of Client
+  Handles Error Frames:
+  WS_Server -> Client: STOMP ERROR (Error Details)
+end note
+
+@enduml

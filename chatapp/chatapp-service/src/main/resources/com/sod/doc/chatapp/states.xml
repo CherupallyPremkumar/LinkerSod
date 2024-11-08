@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<states>
+
+	<event-information eventId='resolve'
+                       meta-bodyType='org.chenile.workflow.param.MinimalPayload'
+					   meta-acls="test.normal,test.premium"
+    />
+	<event-information eventId='createUser'
+                       meta-bodyType='com.sod.doc.chatapp.payload.CreateUserPayload'
+					   meta-acls="test.normal,test.premium"
+    />
+	<event-information eventId='addFriends'
+					   meta-bodyType='com.sod.doc.chatapp.payload.AddFriendUserPayload'
+					   meta-acls="test.normal,test.premium"
+	/>
+	<event-information eventId='close'
+                       meta-bodyType='org.chenile.workflow.param.MinimalPayload'
+					   meta-acls="test.normal,test.premium"
+    />
+	<default-transition-action componentName="chatappBaseTransitionAction"/>
+	
+	<flow id='test-flow' default='true'>
+		<entry-action componentName="chatappEntryAction"/>
+		<exit-action componentName="chatappExitAction"/>
+		<manual-state id='OPENED' initialState='true'>
+			<on eventId='createUser'  newStateId='OPENED' componentName="createUserInChatAppCommand"/>
+			<on eventId='addFriends'  newStateId='OPENED' componentName="addFriendUserCommand"/>
+		</manual-state>
+
+		<manual-state id='ASSIGNED'>
+			<on eventId='resolve' newStateId='RESOLVED'/>
+		</manual-state>
+		<manual-state id='RESOLVED'>
+			<on eventId='close' newStateId='CLOSED'/>
+		</manual-state>
+		<manual-state id='CLOSED' />
+	</flow>
+	
+</states>

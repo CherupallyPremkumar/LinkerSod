@@ -1,0 +1,86 @@
+2024-10-04 23:14:22,876 INFO  [main] CukesSteps: Starting CukesSteps using Java 22.0.2 with PID 65440 (started by premkumar in /Users/premkumar/LinkerSod/chatapp/chatapp-service)
+2024-10-04 23:14:22,876 INFO  [main] CukesSteps: The following 1 profile is active: "unittest"
+2024-10-04 23:14:24,245 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-04 23:14:24,750 INFO  [main] CukesSteps: Started CukesSteps in 2.007 seconds (process running for 2.611)
+2024-10-04 23:14:24,755 DEBUG [main] HttpModuleBuilder: Patterns [/chatapp/{id}, /health-check/{service}, /service-info/{service}, /info, /chatapp/{id}/{eventID}, /chatapp] in 'simpleUrlHandlerMapping'
+2024-10-04 23:14:24,780 INFO  [main] PullPolicy: Image pull policy will be performed by: DefaultPullPolicy()
+2024-10-04 23:14:24,781 INFO  [main] ImageNameSubstitutor: Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2024-10-04 23:14:24,893 INFO  [main] DockerClientProviderStrategy: Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2024-10-04 23:14:25,027 INFO  [main] DockerClientProviderStrategy: Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2024-10-04 23:14:25,027 INFO  [main] DockerClientFactory: Docker host IP address is localhost
+2024-10-04 23:14:25,043 INFO  [main] DockerClientFactory: Connected to docker: 
+  Server Version: 27.1.1
+  API Version: 1.46
+  Operating System: Docker Desktop
+  Total Memory: 7839 MB
+2024-10-04 23:14:25,058 INFO  [main] 0: Creating container for image: testcontainers/ryuk:0.6.0
+2024-10-04 23:14:25,441 INFO  [main] 0: Container testcontainers/ryuk:0.6.0 is starting: 04a7f316c7330ffabfdd7b197e8d5787383f80b36345a2ff4546617ae5402e93
+2024-10-04 23:14:25,998 INFO  [main] 0: Container testcontainers/ryuk:0.6.0 started in PT0.939472S
+2024-10-04 23:14:26,005 INFO  [main] RyukResourceReaper: Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2024-10-04 23:14:26,006 INFO  [main] DockerClientFactory: Checking the system...
+2024-10-04 23:14:26,006 INFO  [main] DockerClientFactory: ✔︎ Docker server version should be at least 1.6.0
+2024-10-04 23:14:26,014 INFO  [main] 0: Creating container for image: quay.io/keycloak/keycloak:25.0
+2024-10-04 23:14:26,113 INFO  [main] RegistryAuthLocator: Credential helper/store (docker-credential-desktop) does not have credentials for quay.io
+2024-10-04 23:14:26,162 INFO  [main] 0: Container quay.io/keycloak/keycloak:25.0 is starting: 190fb970c28793ef55525df5666e49db2f64579322a3829eec8663052084ec2a
+2024-10-04 23:14:26,378 INFO  [docker-java-stream--896909480] 0: STDOUT: JAVA_OPTS_KC_HEAP already set in environment; overriding default settings
+2024-10-04 23:14:26,418 INFO  [main] HttpWaitStrategy: /agitated_liskov: Waiting for 120 seconds for URL: http://localhost:58852/health/started (where port 58852 maps to container port 9000)
+2024-10-04 23:14:27,146 INFO  [docker-java-stream--896909480] 0: STDOUT: Updating the configuration and installing your custom providers, if any. Please wait.
+2024-10-04 23:14:31,704 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:31,702 INFO  [io.qua.dep.QuarkusAugmentor] (main) Quarkus augmentation completed in 3918ms
+2024-10-04 23:14:33,513 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:33,512 INFO  [org.infinispan.CONTAINER] (ForkJoinPool.commonPool-worker-1) ISPN000556: Starting user marshaller 'org.infinispan.jboss.marshalling.core.JBossUserMarshaller'
+2024-10-04 23:14:33,836 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:33,833 INFO  [org.keycloak.broker.provider.AbstractIdentityProviderMapper] (main) Registering class org.keycloak.broker.provider.mappersync.ConfigSyncEventListener
+2024-10-04 23:14:33,845 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:33,844 INFO  [org.keycloak.connections.infinispan.DefaultInfinispanConnectionProviderFactory] (main) Node name: node_976044, Site name: null
+2024-10-04 23:14:34,228 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:34,227 INFO  [org.keycloak.quarkus.runtime.storage.legacy.liquibase.QuarkusJpaUpdaterProvider] (main) Initializing database schema. Using changelog META-INF/jpa-changelog-master.xml
+2024-10-04 23:14:35,160 INFO  [docker-java-stream--896909480] 0: STDOUT: 
+2024-10-04 23:14:35,160 INFO  [docker-java-stream--896909480] 0: STDOUT: UPDATE SUMMARY
+2024-10-04 23:14:35,160 INFO  [docker-java-stream--896909480] 0: STDOUT: Run:                        134
+2024-10-04 23:14:35,160 INFO  [docker-java-stream--896909480] 0: STDOUT: Previously run:               0
+2024-10-04 23:14:35,160 INFO  [docker-java-stream--896909480] 0: STDOUT: Filtered out:                 0
+2024-10-04 23:14:35,160 INFO  [docker-java-stream--896909480] 0: STDOUT: -------------------------------
+2024-10-04 23:14:35,160 INFO  [docker-java-stream--896909480] 0: STDOUT: Total change sets:          134
+2024-10-04 23:14:35,160 INFO  [docker-java-stream--896909480] 0: STDOUT: 
+2024-10-04 23:14:35,390 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:35,387 INFO  [org.keycloak.services] (main) KC-SERVICES0050: Initializing master realm
+2024-10-04 23:14:36,561 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:36,560 INFO  [org.keycloak.exportimport.singlefile.SingleFileImportProvider] (main) Full importing from file /opt/keycloak/bin/../data/import/realm-import-tenant0.json
+2024-10-04 23:14:36,837 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:36,836 WARN  [org.keycloak.models.utils.RepresentationToModel] (main) Referenced client scope 'web-origins' doesn't exist. Ignoring
+2024-10-04 23:14:36,838 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:36,838 WARN  [org.keycloak.models.utils.RepresentationToModel] (main) Referenced client scope 'acr' doesn't exist. Ignoring
+2024-10-04 23:14:36,846 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:36,845 WARN  [org.keycloak.models.utils.RepresentationToModel] (main) Referenced client scope 'roles' doesn't exist. Ignoring
+2024-10-04 23:14:36,847 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:36,846 WARN  [org.keycloak.models.utils.RepresentationToModel] (main) Referenced client scope 'profile' doesn't exist. Ignoring
+2024-10-04 23:14:36,852 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:36,851 WARN  [org.keycloak.models.utils.RepresentationToModel] (main) Referenced client scope 'email' doesn't exist. Ignoring
+2024-10-04 23:14:37,292 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:37,291 INFO  [org.keycloak.exportimport.util.ImportUtils] (main) Realm 'tenant0' imported
+2024-10-04 23:14:37,309 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:37,308 INFO  [org.keycloak.exportimport.singlefile.SingleFileImportProvider] (main) Full importing from file /opt/keycloak/bin/../data/import/realm-import-tenant1.json
+2024-10-04 23:14:37,384 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:37,383 WARN  [org.keycloak.models.utils.RepresentationToModel] (main) Referenced client scope 'web-origins' doesn't exist. Ignoring
+2024-10-04 23:14:37,384 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:37,384 WARN  [org.keycloak.models.utils.RepresentationToModel] (main) Referenced client scope 'acr' doesn't exist. Ignoring
+2024-10-04 23:14:37,387 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:37,386 WARN  [org.keycloak.models.utils.RepresentationToModel] (main) Referenced client scope 'roles' doesn't exist. Ignoring
+2024-10-04 23:14:37,387 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:37,387 WARN  [org.keycloak.models.utils.RepresentationToModel] (main) Referenced client scope 'profile' doesn't exist. Ignoring
+2024-10-04 23:14:37,390 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:37,389 WARN  [org.keycloak.models.utils.RepresentationToModel] (main) Referenced client scope 'email' doesn't exist. Ignoring
+2024-10-04 23:14:37,723 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:37,722 INFO  [org.keycloak.exportimport.util.ImportUtils] (main) Realm 'tenant1' imported
+2024-10-04 23:14:37,736 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:37,735 INFO  [org.keycloak.exportimport.dir.DirImportProvider] (main) Importing from directory /opt/keycloak/bin/../data/import
+2024-10-04 23:14:37,737 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:37,736 INFO  [org.keycloak.services] (main) KC-SERVICES0030: Full model import requested. Strategy: IGNORE_EXISTING
+2024-10-04 23:14:37,737 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:37,736 INFO  [org.keycloak.services] (main) KC-SERVICES0032: Import finished successfully
+2024-10-04 23:14:37,789 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:37,788 INFO  [org.keycloak.services] (main) KC-SERVICES0009: Added user 'admin' to realm 'master'
+2024-10-04 23:14:37,833 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:37,832 INFO  [io.quarkus] (main) Keycloak 25.0.4 on JVM (powered by Quarkus 3.8.5) started in 6.068s. Listening on: http://0.0.0.0:8080. Management interface listening on http://0.0.0.0:9000.
+2024-10-04 23:14:37,833 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:37,832 INFO  [io.quarkus] (main) Profile dev activated. 
+2024-10-04 23:14:37,833 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:37,832 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, jdbc-h2, keycloak, logging-gelf, narayana-jta, reactive-routes, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, smallrye-health, vertx]
+2024-10-04 23:14:37,836 INFO  [docker-java-stream--896909480] 0: STDOUT: 2024-10-05 04:14:37,835 WARN  [org.keycloak.quarkus.runtime.KeycloakMain] (main) Running the server in development mode. DO NOT use this configuration in production.
+2024-10-04 23:14:38,594 INFO  [main] 0: Container quay.io/keycloak/keycloak:25.0 started in PT12.580149S
+2024-10-04 23:14:39,004 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-10-04 23:14:39,004 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-10-04 23:14:39,078 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-10-04 23:14:39,078 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-10-04 23:14:39,170 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-10-04 23:14:39,170 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-10-04 23:14:39,172 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-10-04 23:14:39,172 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-10-04 23:14:39,212 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-10-04 23:14:39,212 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-10-04 23:14:39,216 INFO  [main] ServiceInvoker: Error while executing service _chatappStateEntityService_.processById. Message = Email already exist (type = com.sod.doc.chatapp.exception.UserServiceException)
+2024-10-04 23:14:39,250 DEBUG [main] SecurityServiceImpl: =============== start of security context holder
+2024-10-04 23:14:39,250 DEBUG [main] SecurityServiceImpl: User name is null
+2024-10-04 23:14:39,250 DEBUG [main] SecurityServiceImpl: Principal class is org.springframework.security.oauth2.core.DefaultOAuth2AuthenticatedPrincipal
+2024-10-04 23:14:39,251 DEBUG [main] SecurityServiceImpl: Principal is org.springframework.security.oauth2.core.DefaultOAuth2AuthenticatedPrincipal@13e4a4a0
+2024-10-04 23:14:39,251 DEBUG [main] SecurityServiceImpl: authorities = [SCOPE_test.normal, SCOPE_test.premium]
+2024-10-04 23:14:39,251 DEBUG [main] SecurityServiceImpl: details = WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null]
+2024-10-04 23:14:39,251 DEBUG [main] SecurityServiceImpl: credentials = org.springframework.security.oauth2.core.OAuth2AccessToken@8356ad76
+2024-10-04 23:14:39,251 DEBUG [main] SecurityServiceImpl: =============== end of security context holder
+2024-10-04 23:14:39,251 DEBUG [main] SecurityServiceImpl: Current Authorities are : [SCOPE_test.normal, SCOPE_test.premium]
+2024-10-04 23:14:39,302 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED
+2024-10-04 23:14:39,302 DEBUG [main] STMFlowStoreImpl: :::::::::::::::::::truefor state::::::::OPENED

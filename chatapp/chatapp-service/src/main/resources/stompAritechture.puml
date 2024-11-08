@@ -1,0 +1,36 @@
+@startuml
+
+title STOMP Flow with Topics and Private Queues
+
+actor Client as Client1
+actor Client as Client2
+entity "STOMP Broker" as Broker
+database "Database" as DB
+entity "WebSocket Server" as Server
+
+Client1 -> Server : Connect to WebSocket Endpoint (/realtimedata)
+Server -> Broker : Establish WebSocket Connection
+Client1 -> Server : Subscribe to /topic/messages
+Client2 -> Server : Subscribe to /user/queue/notifications
+
+== Sending a Message ==
+Client1 -> Server : Send Message to /app/sendMessage
+Server -> Broker : Process and Forward to /topic/messages
+
+== Message Distribution ==
+Broker -> Client1 : Broadcast to /topic/messages
+Broker -> Client2 : Broadcast to /topic/messages
+
+== Private Messaging ==
+Client2 -> Server : Send Private Message to /app/privateMessage
+Server -> Broker : Forward to /user/queue/notifications
+
+== Private Message Distribution ==
+Broker -> Client2 : Route to /user/queue/notifications
+
+== Offline User Handling ==
+Client2 -[hidden]-> DB : Store undelivered messages
+Server <-> DB : Update/Check User Status
+DB -> Client2 : Deliver stored messages on reconnection
+
+@enduml

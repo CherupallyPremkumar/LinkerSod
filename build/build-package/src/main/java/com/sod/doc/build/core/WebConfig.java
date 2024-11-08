@@ -11,11 +11,11 @@ import java.util.List;
     @Configuration
     public class WebConfig {
 
-        @Bean
+       @Bean
         public CorsFilter corsFilter() {
             UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
             CorsConfiguration config = new CorsConfiguration();
-            config.setAllowedOrigins(List.of("http://52.228.173.192", "http://premkumarsod.com","http://www.premkumarsod.com/","http://www.premkumarsod.com/"));
+            config.setAllowedOrigins(List.of("http://localhost:4200","http://52.228.173.192", "http://premkumarsod.com","http://www.premkumarsod.com/","http://www.premkumarsod.com/"));
             config.setAllowedMethods(List.of("GET", "POST", "PUT", "PATCH", "HEAD", "DELETE", "OPTIONS"));
             config.setAllowedHeaders(List.of("Origin", "Accept", "X-Requested-With", "Content-Type", "Access-Control-Request-Method", "Access-Control-Request-Headers", "Authorization"));
             config.setExposedHeaders(List.of("Access-Control-Allow-Origin", "Access-Control-Allow-Credentials", "Authorization"));

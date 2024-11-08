@@ -1,0 +1,62 @@
+@startuml
+title Spring WebSocket Architecture
+
+interface WebSocketHandler {
+    + afterConnectionEstablished(WebSocketSession session)
+    + handleMessage(WebSocketSession session, WebSocketMessage<?> message)
+    + afterConnectionClosed(WebSocketSession session, CloseStatus status)
+}
+
+interface WebSocketSession {
+    + getId(): String
+    + sendMessage(WebSocketMessage<?> message)
+    + close(CloseStatus status)
+}
+
+abstract class AbstractWebSocketMessage {
+    + getPayload(): Object
+    + isLast(): boolean
+}
+
+class TextMessage extends AbstractWebSocketMessage {
+    + TextMessage(String payload)
+}
+
+class BinaryMessage extends AbstractWebSocketMessage {
+    + BinaryMessage(byte[] payload)
+}
+
+class WebSocketMessageBrokerConfig {
+    + configureMessageBroker(MessageBrokerRegistry config)
+    + registerStompEndpoints(StompEndpointRegistry registry)
+}
+
+class SimpMessagingTemplate {
+    + convertAndSend(String destination, Object payload)
+}
+
+class StompEndpointRegistry {
+    + addEndpoint(String... paths)
+    + setAllowedOrigins(String... origins)
+}
+
+class MessageBrokerRegistry {
+    + enableSimpleBroker(String... destinations)
+    + setApplicationDestinationPrefixes(String... prefixes)
+}
+
+class MessageBroker {
+    + routeMessage(String destination, Message<?> message)
+}
+
+WebSocketHandler o-- WebSocketSession : manages session
+WebSocketHandler <|.. AbstractWebSocketMessage : uses
+WebSocketSession o-- AbstractWebSocketMessage : sends/receives messages
+WebSocketSession <|-- TextMessage
+WebSocketSession <|-- BinaryMessage
+WebSocketMessageBrokerConfig o-- MessageBrokerRegistry : configures
+WebSocketMessageBrokerConfig o-- StompEndpointRegistry : registers
+SimpMessagingTemplate --> MessageBroker : sends messages via
+MessageBrokerRegistry --> MessageBroker : sets up routing
+
+@enduml

@@ -1,0 +1,17 @@
+{
+	"template": "workflowservice",
+	"artifactType": "service",
+	"data":
+
+{
+"service": "traceroute",
+"serviceVersion": "0.0.1-SNAPSHOT",
+"jpa": "true",
+"com": "com",
+"org": "doc",
+"company": "sod",
+"chenilePackage": "org.chenile",
+"chenileVersion": "1.3.6",
+"Service": "Traceroute"
+}
+}

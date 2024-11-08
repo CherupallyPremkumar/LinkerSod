@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<states>
+	<event-information eventId='assign'
+                       meta-bodyType='com.sod.doc.traceroute.model.AssignTraceroutePayload'
+                       
+    />
+	<event-information eventId='resolve'
+                       meta-bodyType='org.chenile.workflow.param.MinimalPayload'
+                       
+    />
+	<event-information eventId='close'
+                       meta-bodyType='org.chenile.workflow.param.MinimalPayload'
+                       
+    />
+	<default-transition-action componentName="tracerouteBaseTransitionAction"/>
+	
+	<flow id='test-flow' default='true'>
+		<entry-action componentName="tracerouteEntryAction"/>
+		<exit-action componentName="tracerouteExitAction"/>
+		<manual-state id='OPENED' initialState='true'>
+			<on eventId='assign'  newStateId='ASSIGNED' componentName='assignTraceroute'/>
+		</manual-state>
+
+		<manual-state id='ASSIGNED'>
+			<on eventId='resolve' newStateId='RESOLVED' componentName='resolveTraceroute'/>
+		</manual-state>
+		<manual-state id='RESOLVED'>
+			<on eventId='close' newStateId='CLOSED' componentName='closeTraceroute'/>
+		</manual-state>
+		<manual-state id='CLOSED' />
+	</flow>
+	
+</states>

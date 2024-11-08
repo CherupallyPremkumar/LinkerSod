@@ -1,0 +1,15 @@
+@startuml
+skinparam participantStyle rectangle
+
+participant "WebSocket Client" as Client
+participant "Spring WebSocket Server" as Server
+participant "Message Broker" as Broker
+
+Client -> Server: Connect via WebSocket (STOMP)
+Client -> Server: Send message to /app/chat
+Server -> Broker: Forward message to Message Broker
+Broker -> Server: Broadcast message to topic /topic/messages
+Server -> Client: Deliver message to subscribers
+
+@enduml
+
